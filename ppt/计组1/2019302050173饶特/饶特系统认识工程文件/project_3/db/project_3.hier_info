@@ -1,0 +1,68 @@
+|project_3
+o[0] <= lpm_rom0:inst.q[0]
+o[1] <= lpm_rom0:inst.q[1]
+o[2] <= lpm_rom0:inst.q[2]
+o[3] <= lpm_rom0:inst.q[3]
+pin_name1 => lpm_rom0:inst.clock
+a[0] => lpm_rom0:inst.address[0]
+a[1] => lpm_rom0:inst.address[1]
+
+
+|project_3|lpm_rom0:inst
+address[0] => altsyncram:altsyncram_component.address_a[0]
+address[1] => altsyncram:altsyncram_component.address_a[1]
+clock => altsyncram:altsyncram_component.clock0
+q[0] <= altsyncram:altsyncram_component.q_a[0]
+q[1] <= altsyncram:altsyncram_component.q_a[1]
+q[2] <= altsyncram:altsyncram_component.q_a[2]
+q[3] <= altsyncram:altsyncram_component.q_a[3]
+
+
+|project_3|lpm_rom0:inst|altsyncram:altsyncram_component
+wren_a => ~NO_FANOUT~
+wren_b => ~NO_FANOUT~
+rden_b => ~NO_FANOUT~
+data_a[0] => ~NO_FANOUT~
+data_a[1] => ~NO_FANOUT~
+data_a[2] => ~NO_FANOUT~
+data_a[3] => ~NO_FANOUT~
+data_b[0] => ~NO_FANOUT~
+address_a[0] => altsyncram_qs01:auto_generated.address_a[0]
+address_a[1] => altsyncram_qs01:auto_generated.address_a[1]
+address_b[0] => ~NO_FANOUT~
+addressstall_a => ~NO_FANOUT~
+addressstall_b => ~NO_FANOUT~
+clock0 => altsyncram_qs01:auto_generated.clock0
+clock1 => ~NO_FANOUT~
+clocken0 => ~NO_FANOUT~
+clocken1 => ~NO_FANOUT~
+aclr0 => ~NO_FANOUT~
+aclr1 => ~NO_FANOUT~
+byteena_a[0] => ~NO_FANOUT~
+byteena_b[0] => ~NO_FANOUT~
+q_a[0] <= altsyncram_qs01:auto_generated.q_a[0]
+q_a[1] <= altsyncram_qs01:auto_generated.q_a[1]
+q_a[2] <= altsyncram_qs01:auto_generated.q_a[2]
+q_a[3] <= altsyncram_qs01:auto_generated.q_a[3]
+q_b[0] <= <GND>
+
+
+|project_3|lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_qs01:auto_generated
+address_a[0] => ram_block1a0.PORTAADDR
+address_a[0] => ram_block1a1.PORTAADDR
+address_a[0] => ram_block1a2.PORTAADDR
+address_a[0] => ram_block1a3.PORTAADDR
+address_a[1] => ram_block1a0.PORTAADDR1
+address_a[1] => ram_block1a1.PORTAADDR1
+address_a[1] => ram_block1a2.PORTAADDR1
+address_a[1] => ram_block1a3.PORTAADDR1
+clock0 => ram_block1a0.CLK0
+clock0 => ram_block1a1.CLK0
+clock0 => ram_block1a2.CLK0
+clock0 => ram_block1a3.CLK0
+q_a[0] <= ram_block1a0.PORTADATAOUT
+q_a[1] <= ram_block1a1.PORTADATAOUT
+q_a[2] <= ram_block1a2.PORTADATAOUT
+q_a[3] <= ram_block1a3.PORTADATAOUT
+
+

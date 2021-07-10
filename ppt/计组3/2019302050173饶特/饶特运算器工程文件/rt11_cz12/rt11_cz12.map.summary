@@ -1,0 +1,12 @@
+Analysis & Synthesis Status : Successful - Mon Nov 23 19:22:21 2020
+Quartus II Version : 5.1 Build 176 10/26/2005 SJ Full Version
+Revision Name : rt11_cz12
+Top-level Entity Name : rt11_cz12
+Family : Cyclone II
+Total combinational functions : 226
+Total registers : 64
+Total pins : 83
+Total virtual pins : 0
+Total memory bits : 256
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

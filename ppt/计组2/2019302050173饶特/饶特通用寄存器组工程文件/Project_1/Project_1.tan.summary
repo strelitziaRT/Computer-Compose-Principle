@@ -1,0 +1,66 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 8.043 ns
+From           : DRWR
+To             : regfile:inst|register_16:Areg00|q_output[1]
+From Clock     : --
+To Clock       : CLK
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 14.930 ns
+From           : regfile:inst|register_16:Areg01|q_output[12]
+To             : SR_data[12]
+From Clock     : CLK
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 19.001 ns
+From           : SR[1]
+To             : SR_data[12]
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : -4.142 ns
+From           : ADDR[0]
+To             : lpm_rom0:inst1|altsyncram:altsyncram_component|altsyncram_0011:auto_generated|ram_block1a0~porta_address_reg0
+From Clock     : --
+To Clock       : CLK
+Failed Paths   : 0
+
+Type           : Clock Setup: 'CLK'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 154.34 MHz ( period = 6.479 ns )
+From           : lpm_rom0:inst1|altsyncram:altsyncram_component|altsyncram_0011:auto_generated|ram_block1a0~porta_address_reg3
+To             : regfile:inst|register_16:Areg01|q_output[12]
+From Clock     : CLK
+To Clock       : CLK
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

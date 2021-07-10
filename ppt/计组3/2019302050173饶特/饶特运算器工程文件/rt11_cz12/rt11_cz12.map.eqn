@@ -1,0 +1,1953 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--G2_q_output[15] is regfile:inst1|register_16:Areg01|q_output[15]
+G2_q_output[15] = DFFEAS(F1_q_a[15], sw_clk, sw_rst,  , H1L1,  ,  ,  ,  );
+
+
+--G3_q_output[15] is regfile:inst1|register_16:Areg02|q_output[15]
+G3_q_output[15] = DFFEAS(F1_q_a[15], sw_clk, sw_rst,  , H1L2,  ,  ,  ,  );
+
+
+--G1_q_output[15] is regfile:inst1|register_16:Areg00|q_output[15]
+G1_q_output[15] = DFFEAS(F1_q_a[15], sw_clk, sw_rst,  , G1L1,  ,  ,  ,  );
+
+
+--J2L31 is regfile:inst1|mux4_to_1:mux2|out_put[15]~224
+J2L31 = SR[0] & (SR[1]) # !SR[0] & (SR[1] & G3_q_output[15] # !SR[1] & (G1_q_output[15]));
+
+
+--G4_q_output[15] is regfile:inst1|register_16:Areg03|q_output[15]
+G4_q_output[15] = DFFEAS(F1_q_a[15], sw_clk, sw_rst,  , H1L3,  ,  ,  ,  );
+
+
+--J2L32 is regfile:inst1|mux4_to_1:mux2|out_put[15]~225
+J2L32 = SR[0] & (J2L31 & (G4_q_output[15]) # !J2L31 & G2_q_output[15]) # !SR[0] & (J2L31);
+
+
+--G3_q_output[14] is regfile:inst1|register_16:Areg02|q_output[14]
+G3_q_output[14] = DFFEAS(F1_q_a[14], sw_clk, sw_rst,  , H1L2,  ,  ,  ,  );
+
+
+--G2_q_output[14] is regfile:inst1|register_16:Areg01|q_output[14]
+G2_q_output[14] = DFFEAS(F1_q_a[14], sw_clk, sw_rst,  , H1L1,  ,  ,  ,  );
+
+
+--G1_q_output[14] is regfile:inst1|register_16:Areg00|q_output[14]
+G1_q_output[14] = DFFEAS(F1_q_a[14], sw_clk, sw_rst,  , G1L1,  ,  ,  ,  );
+
+
+--J2L29 is regfile:inst1|mux4_to_1:mux2|out_put[14]~226
+J2L29 = SR[1] & (SR[0]) # !SR[1] & (SR[0] & G2_q_output[14] # !SR[0] & (G1_q_output[14]));
+
+
+--G4_q_output[14] is regfile:inst1|register_16:Areg03|q_output[14]
+G4_q_output[14] = DFFEAS(F1_q_a[14], sw_clk, sw_rst,  , H1L3,  ,  ,  ,  );
+
+
+--J2L30 is regfile:inst1|mux4_to_1:mux2|out_put[14]~227
+J2L30 = SR[1] & (J2L29 & (G4_q_output[14]) # !J2L29 & G3_q_output[14]) # !SR[1] & (J2L29);
+
+
+--G2_q_output[13] is regfile:inst1|register_16:Areg01|q_output[13]
+G2_q_output[13] = DFFEAS(F1_q_a[13], sw_clk, sw_rst,  , H1L1,  ,  ,  ,  );
+
+
+--G3_q_output[13] is regfile:inst1|register_16:Areg02|q_output[13]
+G3_q_output[13] = DFFEAS(F1_q_a[13], sw_clk, sw_rst,  , H1L2,  ,  ,  ,  );
+
+
+--G1_q_output[13] is regfile:inst1|register_16:Areg00|q_output[13]
+G1_q_output[13] = DFFEAS(F1_q_a[13], sw_clk, sw_rst,  , G1L1,  ,  ,  ,  );
+
+
+--J2L27 is regfile:inst1|mux4_to_1:mux2|out_put[13]~228
+J2L27 = SR[0] & (SR[1]) # !SR[0] & (SR[1] & G3_q_output[13] # !SR[1] & (G1_q_output[13]));
+
+
+--G4_q_output[13] is regfile:inst1|register_16:Areg03|q_output[13]
+G4_q_output[13] = DFFEAS(F1_q_a[13], sw_clk, sw_rst,  , H1L3,  ,  ,  ,  );
+
+
+--J2L28 is regfile:inst1|mux4_to_1:mux2|out_put[13]~229
+J2L28 = SR[0] & (J2L27 & (G4_q_output[13]) # !J2L27 & G2_q_output[13]) # !SR[0] & (J2L27);
+
+
+--G3_q_output[12] is regfile:inst1|register_16:Areg02|q_output[12]
+G3_q_output[12] = DFFEAS(F1_q_a[12], sw_clk, sw_rst,  , H1L2,  ,  ,  ,  );
+
+
+--G2_q_output[12] is regfile:inst1|register_16:Areg01|q_output[12]
+G2_q_output[12] = DFFEAS(F1_q_a[12], sw_clk, sw_rst,  , H1L1,  ,  ,  ,  );
+
+
+--G1_q_output[12] is regfile:inst1|register_16:Areg00|q_output[12]
+G1_q_output[12] = DFFEAS(F1_q_a[12], sw_clk, sw_rst,  , G1L1,  ,  ,  ,  );
+
+
+--J2L25 is regfile:inst1|mux4_to_1:mux2|out_put[12]~230
+J2L25 = SR[1] & (SR[0]) # !SR[1] & (SR[0] & G2_q_output[12] # !SR[0] & (G1_q_output[12]));
+
+
+--G4_q_output[12] is regfile:inst1|register_16:Areg03|q_output[12]
+G4_q_output[12] = DFFEAS(F1_q_a[12], sw_clk, sw_rst,  , H1L3,  ,  ,  ,  );
+
+
+--J2L26 is regfile:inst1|mux4_to_1:mux2|out_put[12]~231
+J2L26 = SR[1] & (J2L25 & (G4_q_output[12]) # !J2L25 & G3_q_output[12]) # !SR[1] & (J2L25);
+
+
+--G2_q_output[11] is regfile:inst1|register_16:Areg01|q_output[11]
+G2_q_output[11] = DFFEAS(F1_q_a[11], sw_clk, sw_rst,  , H1L1,  ,  ,  ,  );
+
+
+--G3_q_output[11] is regfile:inst1|register_16:Areg02|q_output[11]
+G3_q_output[11] = DFFEAS(F1_q_a[11], sw_clk, sw_rst,  , H1L2,  ,  ,  ,  );
+
+
+--G1_q_output[11] is regfile:inst1|register_16:Areg00|q_output[11]
+G1_q_output[11] = DFFEAS(F1_q_a[11], sw_clk, sw_rst,  , G1L1,  ,  ,  ,  );
+
+
+--J2L23 is regfile:inst1|mux4_to_1:mux2|out_put[11]~232
+J2L23 = SR[0] & (SR[1]) # !SR[0] & (SR[1] & G3_q_output[11] # !SR[1] & (G1_q_output[11]));
+
+
+--G4_q_output[11] is regfile:inst1|register_16:Areg03|q_output[11]
+G4_q_output[11] = DFFEAS(F1_q_a[11], sw_clk, sw_rst,  , H1L3,  ,  ,  ,  );
+
+
+--J2L24 is regfile:inst1|mux4_to_1:mux2|out_put[11]~233
+J2L24 = SR[0] & (J2L23 & (G4_q_output[11]) # !J2L23 & G2_q_output[11]) # !SR[0] & (J2L23);
+
+
+--G3_q_output[10] is regfile:inst1|register_16:Areg02|q_output[10]
+G3_q_output[10] = DFFEAS(F1_q_a[10], sw_clk, sw_rst,  , H1L2,  ,  ,  ,  );
+
+
+--G2_q_output[10] is regfile:inst1|register_16:Areg01|q_output[10]
+G2_q_output[10] = DFFEAS(F1_q_a[10], sw_clk, sw_rst,  , H1L1,  ,  ,  ,  );
+
+
+--G1_q_output[10] is regfile:inst1|register_16:Areg00|q_output[10]
+G1_q_output[10] = DFFEAS(F1_q_a[10], sw_clk, sw_rst,  , G1L1,  ,  ,  ,  );
+
+
+--J2L21 is regfile:inst1|mux4_to_1:mux2|out_put[10]~234
+J2L21 = SR[1] & (SR[0]) # !SR[1] & (SR[0] & G2_q_output[10] # !SR[0] & (G1_q_output[10]));
+
+
+--G4_q_output[10] is regfile:inst1|register_16:Areg03|q_output[10]
+G4_q_output[10] = DFFEAS(F1_q_a[10], sw_clk, sw_rst,  , H1L3,  ,  ,  ,  );
+
+
+--J2L22 is regfile:inst1|mux4_to_1:mux2|out_put[10]~235
+J2L22 = SR[1] & (J2L21 & (G4_q_output[10]) # !J2L21 & G3_q_output[10]) # !SR[1] & (J2L21);
+
+
+--G2_q_output[9] is regfile:inst1|register_16:Areg01|q_output[9]
+G2_q_output[9] = DFFEAS(F1_q_a[9], sw_clk, sw_rst,  , H1L1,  ,  ,  ,  );
+
+
+--G3_q_output[9] is regfile:inst1|register_16:Areg02|q_output[9]
+G3_q_output[9] = DFFEAS(F1_q_a[9], sw_clk, sw_rst,  , H1L2,  ,  ,  ,  );
+
+
+--G1_q_output[9] is regfile:inst1|register_16:Areg00|q_output[9]
+G1_q_output[9] = DFFEAS(F1_q_a[9], sw_clk, sw_rst,  , G1L1,  ,  ,  ,  );
+
+
+--J2L19 is regfile:inst1|mux4_to_1:mux2|out_put[9]~236
+J2L19 = SR[0] & (SR[1]) # !SR[0] & (SR[1] & G3_q_output[9] # !SR[1] & (G1_q_output[9]));
+
+
+--G4_q_output[9] is regfile:inst1|register_16:Areg03|q_output[9]
+G4_q_output[9] = DFFEAS(F1_q_a[9], sw_clk, sw_rst,  , H1L3,  ,  ,  ,  );
+
+
+--J2L20 is regfile:inst1|mux4_to_1:mux2|out_put[9]~237
+J2L20 = SR[0] & (J2L19 & (G4_q_output[9]) # !J2L19 & G2_q_output[9]) # !SR[0] & (J2L19);
+
+
+--G3_q_output[8] is regfile:inst1|register_16:Areg02|q_output[8]
+G3_q_output[8] = DFFEAS(F1_q_a[8], sw_clk, sw_rst,  , H1L2,  ,  ,  ,  );
+
+
+--G2_q_output[8] is regfile:inst1|register_16:Areg01|q_output[8]
+G2_q_output[8] = DFFEAS(F1_q_a[8], sw_clk, sw_rst,  , H1L1,  ,  ,  ,  );
+
+
+--G1_q_output[8] is regfile:inst1|register_16:Areg00|q_output[8]
+G1_q_output[8] = DFFEAS(F1_q_a[8], sw_clk, sw_rst,  , G1L1,  ,  ,  ,  );
+
+
+--J2L17 is regfile:inst1|mux4_to_1:mux2|out_put[8]~238
+J2L17 = SR[1] & (SR[0]) # !SR[1] & (SR[0] & G2_q_output[8] # !SR[0] & (G1_q_output[8]));
+
+
+--G4_q_output[8] is regfile:inst1|register_16:Areg03|q_output[8]
+G4_q_output[8] = DFFEAS(F1_q_a[8], sw_clk, sw_rst,  , H1L3,  ,  ,  ,  );
+
+
+--J2L18 is regfile:inst1|mux4_to_1:mux2|out_put[8]~239
+J2L18 = SR[1] & (J2L17 & (G4_q_output[8]) # !J2L17 & G3_q_output[8]) # !SR[1] & (J2L17);
+
+
+--G2_q_output[7] is regfile:inst1|register_16:Areg01|q_output[7]
+G2_q_output[7] = DFFEAS(F1_q_a[7], sw_clk, sw_rst,  , H1L1,  ,  ,  ,  );
+
+
+--G3_q_output[7] is regfile:inst1|register_16:Areg02|q_output[7]
+G3_q_output[7] = DFFEAS(F1_q_a[7], sw_clk, sw_rst,  , H1L2,  ,  ,  ,  );
+
+
+--G1_q_output[7] is regfile:inst1|register_16:Areg00|q_output[7]
+G1_q_output[7] = DFFEAS(F1_q_a[7], sw_clk, sw_rst,  , G1L1,  ,  ,  ,  );
+
+
+--J2L15 is regfile:inst1|mux4_to_1:mux2|out_put[7]~240
+J2L15 = SR[0] & (SR[1]) # !SR[0] & (SR[1] & G3_q_output[7] # !SR[1] & (G1_q_output[7]));
+
+
+--G4_q_output[7] is regfile:inst1|register_16:Areg03|q_output[7]
+G4_q_output[7] = DFFEAS(F1_q_a[7], sw_clk, sw_rst,  , H1L3,  ,  ,  ,  );
+
+
+--J2L16 is regfile:inst1|mux4_to_1:mux2|out_put[7]~241
+J2L16 = SR[0] & (J2L15 & (G4_q_output[7]) # !J2L15 & G2_q_output[7]) # !SR[0] & (J2L15);
+
+
+--G3_q_output[6] is regfile:inst1|register_16:Areg02|q_output[6]
+G3_q_output[6] = DFFEAS(F1_q_a[6], sw_clk, sw_rst,  , H1L2,  ,  ,  ,  );
+
+
+--G2_q_output[6] is regfile:inst1|register_16:Areg01|q_output[6]
+G2_q_output[6] = DFFEAS(F1_q_a[6], sw_clk, sw_rst,  , H1L1,  ,  ,  ,  );
+
+
+--G1_q_output[6] is regfile:inst1|register_16:Areg00|q_output[6]
+G1_q_output[6] = DFFEAS(F1_q_a[6], sw_clk, sw_rst,  , G1L1,  ,  ,  ,  );
+
+
+--J2L13 is regfile:inst1|mux4_to_1:mux2|out_put[6]~242
+J2L13 = SR[1] & (SR[0]) # !SR[1] & (SR[0] & G2_q_output[6] # !SR[0] & (G1_q_output[6]));
+
+
+--G4_q_output[6] is regfile:inst1|register_16:Areg03|q_output[6]
+G4_q_output[6] = DFFEAS(F1_q_a[6], sw_clk, sw_rst,  , H1L3,  ,  ,  ,  );
+
+
+--J2L14 is regfile:inst1|mux4_to_1:mux2|out_put[6]~243
+J2L14 = SR[1] & (J2L13 & (G4_q_output[6]) # !J2L13 & G3_q_output[6]) # !SR[1] & (J2L13);
+
+
+--G2_q_output[5] is regfile:inst1|register_16:Areg01|q_output[5]
+G2_q_output[5] = DFFEAS(F1_q_a[5], sw_clk, sw_rst,  , H1L1,  ,  ,  ,  );
+
+
+--G3_q_output[5] is regfile:inst1|register_16:Areg02|q_output[5]
+G3_q_output[5] = DFFEAS(F1_q_a[5], sw_clk, sw_rst,  , H1L2,  ,  ,  ,  );
+
+
+--G1_q_output[5] is regfile:inst1|register_16:Areg00|q_output[5]
+G1_q_output[5] = DFFEAS(F1_q_a[5], sw_clk, sw_rst,  , G1L1,  ,  ,  ,  );
+
+
+--J2L11 is regfile:inst1|mux4_to_1:mux2|out_put[5]~244
+J2L11 = SR[0] & (SR[1]) # !SR[0] & (SR[1] & G3_q_output[5] # !SR[1] & (G1_q_output[5]));
+
+
+--G4_q_output[5] is regfile:inst1|register_16:Areg03|q_output[5]
+G4_q_output[5] = DFFEAS(F1_q_a[5], sw_clk, sw_rst,  , H1L3,  ,  ,  ,  );
+
+
+--J2L12 is regfile:inst1|mux4_to_1:mux2|out_put[5]~245
+J2L12 = SR[0] & (J2L11 & (G4_q_output[5]) # !J2L11 & G2_q_output[5]) # !SR[0] & (J2L11);
+
+
+--G3_q_output[4] is regfile:inst1|register_16:Areg02|q_output[4]
+G3_q_output[4] = DFFEAS(F1_q_a[4], sw_clk, sw_rst,  , H1L2,  ,  ,  ,  );
+
+
+--G2_q_output[4] is regfile:inst1|register_16:Areg01|q_output[4]
+G2_q_output[4] = DFFEAS(F1_q_a[4], sw_clk, sw_rst,  , H1L1,  ,  ,  ,  );
+
+
+--G1_q_output[4] is regfile:inst1|register_16:Areg00|q_output[4]
+G1_q_output[4] = DFFEAS(F1_q_a[4], sw_clk, sw_rst,  , G1L1,  ,  ,  ,  );
+
+
+--J2L9 is regfile:inst1|mux4_to_1:mux2|out_put[4]~246
+J2L9 = SR[1] & (SR[0]) # !SR[1] & (SR[0] & G2_q_output[4] # !SR[0] & (G1_q_output[4]));
+
+
+--G4_q_output[4] is regfile:inst1|register_16:Areg03|q_output[4]
+G4_q_output[4] = DFFEAS(F1_q_a[4], sw_clk, sw_rst,  , H1L3,  ,  ,  ,  );
+
+
+--J2L10 is regfile:inst1|mux4_to_1:mux2|out_put[4]~247
+J2L10 = SR[1] & (J2L9 & (G4_q_output[4]) # !J2L9 & G3_q_output[4]) # !SR[1] & (J2L9);
+
+
+--G2_q_output[3] is regfile:inst1|register_16:Areg01|q_output[3]
+G2_q_output[3] = DFFEAS(F1_q_a[3], sw_clk, sw_rst,  , H1L1,  ,  ,  ,  );
+
+
+--G3_q_output[3] is regfile:inst1|register_16:Areg02|q_output[3]
+G3_q_output[3] = DFFEAS(F1_q_a[3], sw_clk, sw_rst,  , H1L2,  ,  ,  ,  );
+
+
+--G1_q_output[3] is regfile:inst1|register_16:Areg00|q_output[3]
+G1_q_output[3] = DFFEAS(F1_q_a[3], sw_clk, sw_rst,  , G1L1,  ,  ,  ,  );
+
+
+--J2L7 is regfile:inst1|mux4_to_1:mux2|out_put[3]~248
+J2L7 = SR[0] & (SR[1]) # !SR[0] & (SR[1] & G3_q_output[3] # !SR[1] & (G1_q_output[3]));
+
+
+--G4_q_output[3] is regfile:inst1|register_16:Areg03|q_output[3]
+G4_q_output[3] = DFFEAS(F1_q_a[3], sw_clk, sw_rst,  , H1L3,  ,  ,  ,  );
+
+
+--J2L8 is regfile:inst1|mux4_to_1:mux2|out_put[3]~249
+J2L8 = SR[0] & (J2L7 & (G4_q_output[3]) # !J2L7 & G2_q_output[3]) # !SR[0] & (J2L7);
+
+
+--G3_q_output[2] is regfile:inst1|register_16:Areg02|q_output[2]
+G3_q_output[2] = DFFEAS(F1_q_a[2], sw_clk, sw_rst,  , H1L2,  ,  ,  ,  );
+
+
+--G2_q_output[2] is regfile:inst1|register_16:Areg01|q_output[2]
+G2_q_output[2] = DFFEAS(F1_q_a[2], sw_clk, sw_rst,  , H1L1,  ,  ,  ,  );
+
+
+--G1_q_output[2] is regfile:inst1|register_16:Areg00|q_output[2]
+G1_q_output[2] = DFFEAS(F1_q_a[2], sw_clk, sw_rst,  , G1L1,  ,  ,  ,  );
+
+
+--J2L5 is regfile:inst1|mux4_to_1:mux2|out_put[2]~250
+J2L5 = SR[1] & (SR[0]) # !SR[1] & (SR[0] & G2_q_output[2] # !SR[0] & (G1_q_output[2]));
+
+
+--G4_q_output[2] is regfile:inst1|register_16:Areg03|q_output[2]
+G4_q_output[2] = DFFEAS(F1_q_a[2], sw_clk, sw_rst,  , H1L3,  ,  ,  ,  );
+
+
+--J2L6 is regfile:inst1|mux4_to_1:mux2|out_put[2]~251
+J2L6 = SR[1] & (J2L5 & (G4_q_output[2]) # !J2L5 & G3_q_output[2]) # !SR[1] & (J2L5);
+
+
+--G2_q_output[1] is regfile:inst1|register_16:Areg01|q_output[1]
+G2_q_output[1] = DFFEAS(F1_q_a[1], sw_clk, sw_rst,  , H1L1,  ,  ,  ,  );
+
+
+--G3_q_output[1] is regfile:inst1|register_16:Areg02|q_output[1]
+G3_q_output[1] = DFFEAS(F1_q_a[1], sw_clk, sw_rst,  , H1L2,  ,  ,  ,  );
+
+
+--G1_q_output[1] is regfile:inst1|register_16:Areg00|q_output[1]
+G1_q_output[1] = DFFEAS(F1_q_a[1], sw_clk, sw_rst,  , G1L1,  ,  ,  ,  );
+
+
+--J2L3 is regfile:inst1|mux4_to_1:mux2|out_put[1]~252
+J2L3 = SR[0] & (SR[1]) # !SR[0] & (SR[1] & G3_q_output[1] # !SR[1] & (G1_q_output[1]));
+
+
+--G4_q_output[1] is regfile:inst1|register_16:Areg03|q_output[1]
+G4_q_output[1] = DFFEAS(F1_q_a[1], sw_clk, sw_rst,  , H1L3,  ,  ,  ,  );
+
+
+--J2L4 is regfile:inst1|mux4_to_1:mux2|out_put[1]~253
+J2L4 = SR[0] & (J2L3 & (G4_q_output[1]) # !J2L3 & G2_q_output[1]) # !SR[0] & (J2L3);
+
+
+--G3_q_output[0] is regfile:inst1|register_16:Areg02|q_output[0]
+G3_q_output[0] = DFFEAS(F1_q_a[0], sw_clk, sw_rst,  , H1L2,  ,  ,  ,  );
+
+
+--G2_q_output[0] is regfile:inst1|register_16:Areg01|q_output[0]
+G2_q_output[0] = DFFEAS(F1_q_a[0], sw_clk, sw_rst,  , H1L1,  ,  ,  ,  );
+
+
+--G1_q_output[0] is regfile:inst1|register_16:Areg00|q_output[0]
+G1_q_output[0] = DFFEAS(F1_q_a[0], sw_clk, sw_rst,  , G1L1,  ,  ,  ,  );
+
+
+--J2L1 is regfile:inst1|mux4_to_1:mux2|out_put[0]~254
+J2L1 = SR[1] & (SR[0]) # !SR[1] & (SR[0] & G2_q_output[0] # !SR[0] & (G1_q_output[0]));
+
+
+--G4_q_output[0] is regfile:inst1|register_16:Areg03|q_output[0]
+G4_q_output[0] = DFFEAS(F1_q_a[0], sw_clk, sw_rst,  , H1L3,  ,  ,  ,  );
+
+
+--J2L2 is regfile:inst1|mux4_to_1:mux2|out_put[0]~255
+J2L2 = SR[1] & (J2L1 & (G4_q_output[0]) # !J2L1 & G3_q_output[0]) # !SR[1] & (J2L1);
+
+
+--D1L1 is alu:inst10|add~986
+D1L1 = J2L2 & (cin $ GND) # !J2L2 & (GND # !cin);
+
+--D1L2 is alu:inst10|add~987
+D1L2 = CARRY(!cin # !J2L2);
+
+
+--D1L3 is alu:inst10|add~988
+D1L3 = J2L4 & !D1L2 # !J2L4 & D1L2 & VCC;
+
+--D1L4 is alu:inst10|add~989
+D1L4 = CARRY(J2L4 & !D1L2);
+
+
+--D1L5 is alu:inst10|add~990
+D1L5 = J2L6 & (D1L4 $ GND) # !J2L6 & (GND # !D1L4);
+
+--D1L6 is alu:inst10|add~991
+D1L6 = CARRY(!D1L4 # !J2L6);
+
+
+--D1L7 is alu:inst10|add~992
+D1L7 = J2L8 & !D1L6 # !J2L8 & D1L6 & VCC;
+
+--D1L8 is alu:inst10|add~993
+D1L8 = CARRY(J2L8 & !D1L6);
+
+
+--D1L9 is alu:inst10|add~994
+D1L9 = J2L10 & (D1L8 $ GND) # !J2L10 & (GND # !D1L8);
+
+--D1L10 is alu:inst10|add~995
+D1L10 = CARRY(!D1L8 # !J2L10);
+
+
+--D1L11 is alu:inst10|add~996
+D1L11 = J2L12 & !D1L10 # !J2L12 & D1L10 & VCC;
+
+--D1L12 is alu:inst10|add~997
+D1L12 = CARRY(J2L12 & !D1L10);
+
+
+--D1L13 is alu:inst10|add~998
+D1L13 = J2L14 & (D1L12 $ GND) # !J2L14 & (GND # !D1L12);
+
+--D1L14 is alu:inst10|add~999
+D1L14 = CARRY(!D1L12 # !J2L14);
+
+
+--D1L15 is alu:inst10|add~1000
+D1L15 = J2L16 & !D1L14 # !J2L16 & D1L14 & VCC;
+
+--D1L16 is alu:inst10|add~1001
+D1L16 = CARRY(J2L16 & !D1L14);
+
+
+--D1L17 is alu:inst10|add~1002
+D1L17 = J2L18 & (D1L16 $ GND) # !J2L18 & (GND # !D1L16);
+
+--D1L18 is alu:inst10|add~1003
+D1L18 = CARRY(!D1L16 # !J2L18);
+
+
+--D1L19 is alu:inst10|add~1004
+D1L19 = J2L20 & !D1L18 # !J2L20 & D1L18 & VCC;
+
+--D1L20 is alu:inst10|add~1005
+D1L20 = CARRY(J2L20 & !D1L18);
+
+
+--D1L21 is alu:inst10|add~1006
+D1L21 = J2L22 & (D1L20 $ GND) # !J2L22 & (GND # !D1L20);
+
+--D1L22 is alu:inst10|add~1007
+D1L22 = CARRY(!D1L20 # !J2L22);
+
+
+--D1L23 is alu:inst10|add~1008
+D1L23 = J2L24 & !D1L22 # !J2L24 & D1L22 & VCC;
+
+--D1L24 is alu:inst10|add~1009
+D1L24 = CARRY(J2L24 & !D1L22);
+
+
+--D1L25 is alu:inst10|add~1010
+D1L25 = J2L26 & (D1L24 $ GND) # !J2L26 & (GND # !D1L24);
+
+--D1L26 is alu:inst10|add~1011
+D1L26 = CARRY(!D1L24 # !J2L26);
+
+
+--D1L27 is alu:inst10|add~1012
+D1L27 = J2L28 & !D1L26 # !J2L28 & D1L26 & VCC;
+
+--D1L28 is alu:inst10|add~1013
+D1L28 = CARRY(J2L28 & !D1L26);
+
+
+--D1L29 is alu:inst10|add~1014
+D1L29 = J2L30 & (D1L28 $ GND) # !J2L30 & (GND # !D1L28);
+
+--D1L30 is alu:inst10|add~1015
+D1L30 = CARRY(!D1L28 # !J2L30);
+
+
+--D1L31 is alu:inst10|add~1016
+D1L31 = J2L32 $ D1L30;
+
+
+--J1L31 is regfile:inst1|mux4_to_1:mux1|out_put[15]~232
+J1L31 = DR[1] & (DR[0]) # !DR[1] & (DR[0] & G2_q_output[15] # !DR[0] & (G1_q_output[15]));
+
+
+--J1L32 is regfile:inst1|mux4_to_1:mux1|out_put[15]~233
+J1L32 = DR[1] & (J1L31 & (G4_q_output[15]) # !J1L31 & G3_q_output[15]) # !DR[1] & (J1L31);
+
+
+--J1L29 is regfile:inst1|mux4_to_1:mux1|out_put[14]~234
+J1L29 = DR[0] & (DR[1]) # !DR[0] & (DR[1] & G3_q_output[14] # !DR[1] & (G1_q_output[14]));
+
+
+--J1L30 is regfile:inst1|mux4_to_1:mux1|out_put[14]~235
+J1L30 = DR[0] & (J1L29 & (G4_q_output[14]) # !J1L29 & G2_q_output[14]) # !DR[0] & (J1L29);
+
+
+--J1L27 is regfile:inst1|mux4_to_1:mux1|out_put[13]~236
+J1L27 = DR[1] & (DR[0]) # !DR[1] & (DR[0] & G2_q_output[13] # !DR[0] & (G1_q_output[13]));
+
+
+--J1L28 is regfile:inst1|mux4_to_1:mux1|out_put[13]~237
+J1L28 = DR[1] & (J1L27 & (G4_q_output[13]) # !J1L27 & G3_q_output[13]) # !DR[1] & (J1L27);
+
+
+--J1L25 is regfile:inst1|mux4_to_1:mux1|out_put[12]~238
+J1L25 = DR[0] & (DR[1]) # !DR[0] & (DR[1] & G3_q_output[12] # !DR[1] & (G1_q_output[12]));
+
+
+--J1L26 is regfile:inst1|mux4_to_1:mux1|out_put[12]~239
+J1L26 = DR[0] & (J1L25 & (G4_q_output[12]) # !J1L25 & G2_q_output[12]) # !DR[0] & (J1L25);
+
+
+--J1L23 is regfile:inst1|mux4_to_1:mux1|out_put[11]~240
+J1L23 = DR[1] & (DR[0]) # !DR[1] & (DR[0] & G2_q_output[11] # !DR[0] & (G1_q_output[11]));
+
+
+--J1L24 is regfile:inst1|mux4_to_1:mux1|out_put[11]~241
+J1L24 = DR[1] & (J1L23 & (G4_q_output[11]) # !J1L23 & G3_q_output[11]) # !DR[1] & (J1L23);
+
+
+--J1L21 is regfile:inst1|mux4_to_1:mux1|out_put[10]~242
+J1L21 = DR[0] & (DR[1]) # !DR[0] & (DR[1] & G3_q_output[10] # !DR[1] & (G1_q_output[10]));
+
+
+--J1L22 is regfile:inst1|mux4_to_1:mux1|out_put[10]~243
+J1L22 = DR[0] & (J1L21 & (G4_q_output[10]) # !J1L21 & G2_q_output[10]) # !DR[0] & (J1L21);
+
+
+--J1L19 is regfile:inst1|mux4_to_1:mux1|out_put[9]~244
+J1L19 = DR[1] & (DR[0]) # !DR[1] & (DR[0] & G2_q_output[9] # !DR[0] & (G1_q_output[9]));
+
+
+--J1L20 is regfile:inst1|mux4_to_1:mux1|out_put[9]~245
+J1L20 = DR[1] & (J1L19 & (G4_q_output[9]) # !J1L19 & G3_q_output[9]) # !DR[1] & (J1L19);
+
+
+--J1L17 is regfile:inst1|mux4_to_1:mux1|out_put[8]~246
+J1L17 = DR[0] & (DR[1]) # !DR[0] & (DR[1] & G3_q_output[8] # !DR[1] & (G1_q_output[8]));
+
+
+--J1L18 is regfile:inst1|mux4_to_1:mux1|out_put[8]~247
+J1L18 = DR[0] & (J1L17 & (G4_q_output[8]) # !J1L17 & G2_q_output[8]) # !DR[0] & (J1L17);
+
+
+--J1L15 is regfile:inst1|mux4_to_1:mux1|out_put[7]~248
+J1L15 = DR[1] & (DR[0]) # !DR[1] & (DR[0] & G2_q_output[7] # !DR[0] & (G1_q_output[7]));
+
+
+--J1L16 is regfile:inst1|mux4_to_1:mux1|out_put[7]~249
+J1L16 = DR[1] & (J1L15 & (G4_q_output[7]) # !J1L15 & G3_q_output[7]) # !DR[1] & (J1L15);
+
+
+--J1L13 is regfile:inst1|mux4_to_1:mux1|out_put[6]~250
+J1L13 = DR[0] & (DR[1]) # !DR[0] & (DR[1] & G3_q_output[6] # !DR[1] & (G1_q_output[6]));
+
+
+--J1L14 is regfile:inst1|mux4_to_1:mux1|out_put[6]~251
+J1L14 = DR[0] & (J1L13 & (G4_q_output[6]) # !J1L13 & G2_q_output[6]) # !DR[0] & (J1L13);
+
+
+--J1L11 is regfile:inst1|mux4_to_1:mux1|out_put[5]~252
+J1L11 = DR[1] & (DR[0]) # !DR[1] & (DR[0] & G2_q_output[5] # !DR[0] & (G1_q_output[5]));
+
+
+--J1L12 is regfile:inst1|mux4_to_1:mux1|out_put[5]~253
+J1L12 = DR[1] & (J1L11 & (G4_q_output[5]) # !J1L11 & G3_q_output[5]) # !DR[1] & (J1L11);
+
+
+--J1L9 is regfile:inst1|mux4_to_1:mux1|out_put[4]~254
+J1L9 = DR[0] & (DR[1]) # !DR[0] & (DR[1] & G3_q_output[4] # !DR[1] & (G1_q_output[4]));
+
+
+--J1L10 is regfile:inst1|mux4_to_1:mux1|out_put[4]~255
+J1L10 = DR[0] & (J1L9 & (G4_q_output[4]) # !J1L9 & G2_q_output[4]) # !DR[0] & (J1L9);
+
+
+--J1L7 is regfile:inst1|mux4_to_1:mux1|out_put[3]~256
+J1L7 = DR[1] & (DR[0]) # !DR[1] & (DR[0] & G2_q_output[3] # !DR[0] & (G1_q_output[3]));
+
+
+--J1L8 is regfile:inst1|mux4_to_1:mux1|out_put[3]~257
+J1L8 = DR[1] & (J1L7 & (G4_q_output[3]) # !J1L7 & G3_q_output[3]) # !DR[1] & (J1L7);
+
+
+--J1L5 is regfile:inst1|mux4_to_1:mux1|out_put[2]~258
+J1L5 = DR[0] & (DR[1]) # !DR[0] & (DR[1] & G3_q_output[2] # !DR[1] & (G1_q_output[2]));
+
+
+--J1L6 is regfile:inst1|mux4_to_1:mux1|out_put[2]~259
+J1L6 = DR[0] & (J1L5 & (G4_q_output[2]) # !J1L5 & G2_q_output[2]) # !DR[0] & (J1L5);
+
+
+--J1L3 is regfile:inst1|mux4_to_1:mux1|out_put[1]~260
+J1L3 = DR[1] & (DR[0]) # !DR[1] & (DR[0] & G2_q_output[1] # !DR[0] & (G1_q_output[1]));
+
+
+--J1L4 is regfile:inst1|mux4_to_1:mux1|out_put[1]~261
+J1L4 = DR[1] & (J1L3 & (G4_q_output[1]) # !J1L3 & G3_q_output[1]) # !DR[1] & (J1L3);
+
+
+--J1L1 is regfile:inst1|mux4_to_1:mux1|out_put[0]~262
+J1L1 = DR[0] & (DR[1]) # !DR[0] & (DR[1] & G3_q_output[0] # !DR[1] & (G1_q_output[0]));
+
+
+--J1L2 is regfile:inst1|mux4_to_1:mux1|out_put[0]~263
+J1L2 = DR[0] & (J1L1 & (G4_q_output[0]) # !J1L1 & G2_q_output[0]) # !DR[0] & (J1L1);
+
+
+--D1L155 is alu:inst10|LessThan~419
+D1L155 = CARRY(!D1L1 & J1L2);
+
+
+--D1L157 is alu:inst10|LessThan~421
+D1L157 = CARRY(D1L3 & (!D1L155 # !J1L4) # !D1L3 & !J1L4 & !D1L155);
+
+
+--D1L159 is alu:inst10|LessThan~423
+D1L159 = CARRY(D1L5 & J1L6 & !D1L157 # !D1L5 & (J1L6 # !D1L157));
+
+
+--D1L161 is alu:inst10|LessThan~425
+D1L161 = CARRY(D1L7 & (!D1L159 # !J1L8) # !D1L7 & !J1L8 & !D1L159);
+
+
+--D1L163 is alu:inst10|LessThan~427
+D1L163 = CARRY(D1L9 & J1L10 & !D1L161 # !D1L9 & (J1L10 # !D1L161));
+
+
+--D1L165 is alu:inst10|LessThan~429
+D1L165 = CARRY(D1L11 & (!D1L163 # !J1L12) # !D1L11 & !J1L12 & !D1L163);
+
+
+--D1L167 is alu:inst10|LessThan~431
+D1L167 = CARRY(D1L13 & J1L14 & !D1L165 # !D1L13 & (J1L14 # !D1L165));
+
+
+--D1L169 is alu:inst10|LessThan~433
+D1L169 = CARRY(D1L15 & (!D1L167 # !J1L16) # !D1L15 & !J1L16 & !D1L167);
+
+
+--D1L171 is alu:inst10|LessThan~435
+D1L171 = CARRY(D1L17 & J1L18 & !D1L169 # !D1L17 & (J1L18 # !D1L169));
+
+
+--D1L173 is alu:inst10|LessThan~437
+D1L173 = CARRY(D1L19 & (!D1L171 # !J1L20) # !D1L19 & !J1L20 & !D1L171);
+
+
+--D1L175 is alu:inst10|LessThan~439
+D1L175 = CARRY(D1L21 & J1L22 & !D1L173 # !D1L21 & (J1L22 # !D1L173));
+
+
+--D1L177 is alu:inst10|LessThan~441
+D1L177 = CARRY(D1L23 & (!D1L175 # !J1L24) # !D1L23 & !J1L24 & !D1L175);
+
+
+--D1L179 is alu:inst10|LessThan~443
+D1L179 = CARRY(D1L25 & J1L26 & !D1L177 # !D1L25 & (J1L26 # !D1L177));
+
+
+--D1L181 is alu:inst10|LessThan~445
+D1L181 = CARRY(D1L27 & (!D1L179 # !J1L28) # !D1L27 & !J1L28 & !D1L179);
+
+
+--D1L183 is alu:inst10|LessThan~447
+D1L183 = CARRY(D1L29 & J1L30 & !D1L181 # !D1L29 & (J1L30 # !D1L181));
+
+
+--D1L184 is alu:inst10|LessThan~448
+D1L184 = D1L31 & J1L32 & D1L183 # !D1L31 & (J1L32 # D1L183);
+
+
+--D1L187 is alu:inst10|LessThan~451
+D1L187 = CARRY(!J2L2 & J1L2);
+
+
+--D1L189 is alu:inst10|LessThan~453
+D1L189 = CARRY(J2L4 & (!D1L187 # !J1L4) # !J2L4 & !J1L4 & !D1L187);
+
+
+--D1L191 is alu:inst10|LessThan~455
+D1L191 = CARRY(J2L6 & J1L6 & !D1L189 # !J2L6 & (J1L6 # !D1L189));
+
+
+--D1L193 is alu:inst10|LessThan~457
+D1L193 = CARRY(J2L8 & (!D1L191 # !J1L8) # !J2L8 & !J1L8 & !D1L191);
+
+
+--D1L195 is alu:inst10|LessThan~459
+D1L195 = CARRY(J2L10 & J1L10 & !D1L193 # !J2L10 & (J1L10 # !D1L193));
+
+
+--D1L197 is alu:inst10|LessThan~461
+D1L197 = CARRY(J2L12 & (!D1L195 # !J1L12) # !J2L12 & !J1L12 & !D1L195);
+
+
+--D1L199 is alu:inst10|LessThan~463
+D1L199 = CARRY(J2L14 & J1L14 & !D1L197 # !J2L14 & (J1L14 # !D1L197));
+
+
+--D1L201 is alu:inst10|LessThan~465
+D1L201 = CARRY(J2L16 & (!D1L199 # !J1L16) # !J2L16 & !J1L16 & !D1L199);
+
+
+--D1L203 is alu:inst10|LessThan~467
+D1L203 = CARRY(J2L18 & J1L18 & !D1L201 # !J2L18 & (J1L18 # !D1L201));
+
+
+--D1L205 is alu:inst10|LessThan~469
+D1L205 = CARRY(J2L20 & (!D1L203 # !J1L20) # !J2L20 & !J1L20 & !D1L203);
+
+
+--D1L207 is alu:inst10|LessThan~471
+D1L207 = CARRY(J2L22 & J1L22 & !D1L205 # !J2L22 & (J1L22 # !D1L205));
+
+
+--D1L209 is alu:inst10|LessThan~473
+D1L209 = CARRY(J2L24 & (!D1L207 # !J1L24) # !J2L24 & !J1L24 & !D1L207);
+
+
+--D1L211 is alu:inst10|LessThan~475
+D1L211 = CARRY(J2L26 & J1L26 & !D1L209 # !J2L26 & (J1L26 # !D1L209));
+
+
+--D1L213 is alu:inst10|LessThan~477
+D1L213 = CARRY(J2L28 & (!D1L211 # !J1L28) # !J2L28 & !J1L28 & !D1L211);
+
+
+--D1L215 is alu:inst10|LessThan~479
+D1L215 = CARRY(J2L30 & J1L30 & !D1L213 # !J2L30 & (J1L30 # !D1L213));
+
+
+--D1L216 is alu:inst10|LessThan~480
+D1L216 = J2L32 & J1L32 & D1L215 # !J2L32 & (J1L32 # D1L215);
+
+
+--D1L149 is alu:inst10|c~423
+D1L149 = alu_func[2] & (J2L2 # !alu_func[1]);
+
+
+--D1L150 is alu:inst10|c~424
+D1L150 = alu_func[0] & (D1L149 & J2L32 # !D1L149 & (D1L216)) # !alu_func[0] & (D1L149);
+
+
+--D1L151 is alu:inst10|c~425
+D1L151 = D1L150 & (alu_func[1] $ alu_func[0]) # !D1L150 & D1L184 & !alu_func[1] & !alu_func[0];
+
+
+--D1L144 is alu:inst10|alu_out[15]~4796
+D1L144 = J2L32 & (J1L32 # alu_func[0]) # !J2L32 & J1L32 & alu_func[0];
+
+
+--D1L145 is alu:inst10|alu_out[15]~4797
+D1L145 = alu_func[0] & J2L30 # !alu_func[0] & (J2L32 $ J1L32);
+
+
+--D1L146 is alu:inst10|alu_out[15]~4798
+D1L146 = alu_func[2] & (D1L145 & !alu_func[1]) # !alu_func[2] & D1L144 & (alu_func[1]);
+
+
+--D1L33 is alu:inst10|add~1018
+D1L33 = J1L32 $ alu_func[0];
+
+
+--D1L34 is alu:inst10|add~1019
+D1L34 = J1L30 $ alu_func[0];
+
+
+--D1L35 is alu:inst10|add~1020
+D1L35 = J1L28 $ alu_func[0];
+
+
+--D1L36 is alu:inst10|add~1021
+D1L36 = J1L26 $ alu_func[0];
+
+
+--D1L37 is alu:inst10|add~1022
+D1L37 = J1L24 $ alu_func[0];
+
+
+--D1L38 is alu:inst10|add~1023
+D1L38 = J1L22 $ alu_func[0];
+
+
+--D1L39 is alu:inst10|add~1024
+D1L39 = J1L20 $ alu_func[0];
+
+
+--D1L40 is alu:inst10|add~1025
+D1L40 = J1L18 $ alu_func[0];
+
+
+--D1L41 is alu:inst10|add~1026
+D1L41 = J1L16 $ alu_func[0];
+
+
+--D1L42 is alu:inst10|add~1027
+D1L42 = J1L14 $ alu_func[0];
+
+
+--D1L43 is alu:inst10|add~1028
+D1L43 = J1L12 $ alu_func[0];
+
+
+--D1L44 is alu:inst10|add~1029
+D1L44 = J1L10 $ alu_func[0];
+
+
+--D1L45 is alu:inst10|add~1030
+D1L45 = J1L8 $ alu_func[0];
+
+
+--D1L46 is alu:inst10|add~1031
+D1L46 = J1L6 $ alu_func[0];
+
+
+--D1L47 is alu:inst10|add~1032
+D1L47 = J1L4 $ alu_func[0];
+
+
+--D1L48 is alu:inst10|add~1033
+D1L48 = J1L2 $ alu_func[0];
+
+
+--D1L50 is alu:inst10|add~1035
+D1L50 = CARRY(alu_func[0] $ cin);
+
+
+--D1L51 is alu:inst10|add~1036
+D1L51 = J2L2 & (D1L48 & D1L50 & VCC # !D1L48 & !D1L50) # !J2L2 & (D1L48 & !D1L50 # !D1L48 & (D1L50 # GND));
+
+--D1L52 is alu:inst10|add~1037
+D1L52 = CARRY(J2L2 & !D1L48 & !D1L50 # !J2L2 & (!D1L50 # !D1L48));
+
+
+--D1L53 is alu:inst10|add~1038
+D1L53 = (J2L4 $ D1L47 $ !D1L52) # GND;
+
+--D1L54 is alu:inst10|add~1039
+D1L54 = CARRY(J2L4 & (D1L47 # !D1L52) # !J2L4 & D1L47 & !D1L52);
+
+
+--D1L55 is alu:inst10|add~1040
+D1L55 = J2L6 & (D1L46 & D1L54 & VCC # !D1L46 & !D1L54) # !J2L6 & (D1L46 & !D1L54 # !D1L46 & (D1L54 # GND));
+
+--D1L56 is alu:inst10|add~1041
+D1L56 = CARRY(J2L6 & !D1L46 & !D1L54 # !J2L6 & (!D1L54 # !D1L46));
+
+
+--D1L57 is alu:inst10|add~1042
+D1L57 = (J2L8 $ D1L45 $ !D1L56) # GND;
+
+--D1L58 is alu:inst10|add~1043
+D1L58 = CARRY(J2L8 & (D1L45 # !D1L56) # !J2L8 & D1L45 & !D1L56);
+
+
+--D1L59 is alu:inst10|add~1044
+D1L59 = J2L10 & (D1L44 & D1L58 & VCC # !D1L44 & !D1L58) # !J2L10 & (D1L44 & !D1L58 # !D1L44 & (D1L58 # GND));
+
+--D1L60 is alu:inst10|add~1045
+D1L60 = CARRY(J2L10 & !D1L44 & !D1L58 # !J2L10 & (!D1L58 # !D1L44));
+
+
+--D1L61 is alu:inst10|add~1046
+D1L61 = (J2L12 $ D1L43 $ !D1L60) # GND;
+
+--D1L62 is alu:inst10|add~1047
+D1L62 = CARRY(J2L12 & (D1L43 # !D1L60) # !J2L12 & D1L43 & !D1L60);
+
+
+--D1L63 is alu:inst10|add~1048
+D1L63 = J2L14 & (D1L42 & D1L62 & VCC # !D1L42 & !D1L62) # !J2L14 & (D1L42 & !D1L62 # !D1L42 & (D1L62 # GND));
+
+--D1L64 is alu:inst10|add~1049
+D1L64 = CARRY(J2L14 & !D1L42 & !D1L62 # !J2L14 & (!D1L62 # !D1L42));
+
+
+--D1L65 is alu:inst10|add~1050
+D1L65 = (J2L16 $ D1L41 $ !D1L64) # GND;
+
+--D1L66 is alu:inst10|add~1051
+D1L66 = CARRY(J2L16 & (D1L41 # !D1L64) # !J2L16 & D1L41 & !D1L64);
+
+
+--D1L67 is alu:inst10|add~1052
+D1L67 = J2L18 & (D1L40 & D1L66 & VCC # !D1L40 & !D1L66) # !J2L18 & (D1L40 & !D1L66 # !D1L40 & (D1L66 # GND));
+
+--D1L68 is alu:inst10|add~1053
+D1L68 = CARRY(J2L18 & !D1L40 & !D1L66 # !J2L18 & (!D1L66 # !D1L40));
+
+
+--D1L69 is alu:inst10|add~1054
+D1L69 = (J2L20 $ D1L39 $ !D1L68) # GND;
+
+--D1L70 is alu:inst10|add~1055
+D1L70 = CARRY(J2L20 & (D1L39 # !D1L68) # !J2L20 & D1L39 & !D1L68);
+
+
+--D1L71 is alu:inst10|add~1056
+D1L71 = J2L22 & (D1L38 & D1L70 & VCC # !D1L38 & !D1L70) # !J2L22 & (D1L38 & !D1L70 # !D1L38 & (D1L70 # GND));
+
+--D1L72 is alu:inst10|add~1057
+D1L72 = CARRY(J2L22 & !D1L38 & !D1L70 # !J2L22 & (!D1L70 # !D1L38));
+
+
+--D1L73 is alu:inst10|add~1058
+D1L73 = (J2L24 $ D1L37 $ !D1L72) # GND;
+
+--D1L74 is alu:inst10|add~1059
+D1L74 = CARRY(J2L24 & (D1L37 # !D1L72) # !J2L24 & D1L37 & !D1L72);
+
+
+--D1L75 is alu:inst10|add~1060
+D1L75 = J2L26 & (D1L36 & D1L74 & VCC # !D1L36 & !D1L74) # !J2L26 & (D1L36 & !D1L74 # !D1L36 & (D1L74 # GND));
+
+--D1L76 is alu:inst10|add~1061
+D1L76 = CARRY(J2L26 & !D1L36 & !D1L74 # !J2L26 & (!D1L74 # !D1L36));
+
+
+--D1L77 is alu:inst10|add~1062
+D1L77 = (J2L28 $ D1L35 $ !D1L76) # GND;
+
+--D1L78 is alu:inst10|add~1063
+D1L78 = CARRY(J2L28 & (D1L35 # !D1L76) # !J2L28 & D1L35 & !D1L76);
+
+
+--D1L79 is alu:inst10|add~1064
+D1L79 = J2L30 & (D1L34 & D1L78 & VCC # !D1L34 & !D1L78) # !J2L30 & (D1L34 & !D1L78 # !D1L34 & (D1L78 # GND));
+
+--D1L80 is alu:inst10|add~1065
+D1L80 = CARRY(J2L30 & !D1L34 & !D1L78 # !J2L30 & (!D1L78 # !D1L34));
+
+
+--D1L81 is alu:inst10|add~1066
+D1L81 = J2L32 $ D1L33 $ !D1L80;
+
+
+--D1L147 is alu:inst10|alu_out[15]~4799
+D1L147 = D1L146 # D1L81 & !alu_func[2] & !alu_func[1];
+
+
+--D1L138 is alu:inst10|alu_out[14]~4800
+D1L138 = alu_func[2] & !alu_func[0] # !alu_func[1];
+
+
+--D1L139 is alu:inst10|alu_out[14]~4801
+D1L139 = alu_func[1] & (alu_func[2] # alu_func[0]);
+
+
+--D1L110 is alu:inst10|alu_out[7]~4802
+D1L110 = D1L138 & (D1L139 & J2L18 # !D1L139 & (D1L65)) # !D1L138 & (!D1L139);
+
+
+--D1L148 is alu:inst10|alu_out[15]~4803
+D1L148 = alu_func[1] & !alu_func[2];
+
+
+--D1L111 is alu:inst10|alu_out[7]~4804
+D1L111 = D1L110 & (J1L16 & J2L16 # !D1L148) # !D1L110 & D1L148 & (J1L16 # J2L16);
+
+
+--D1L112 is alu:inst10|alu_out[7]~4805
+D1L112 = alu_func[0] & J2L14 # !alu_func[0] & (J2L16 $ J1L16);
+
+
+--D1L113 is alu:inst10|alu_out[7]~4806
+D1L113 = alu_func[2] & (alu_func[1] & D1L111 # !alu_func[1] & (D1L112)) # !alu_func[2] & D1L111;
+
+
+--D1L152 is alu:inst10|c~426
+D1L152 = J2L2 & (J1L2 # alu_func[0]) # !J2L2 & J1L2 & alu_func[0];
+
+
+--D1L83 is alu:inst10|alu_out[0]~4807
+D1L83 = alu_func[2] & (alu_func[1]) # !alu_func[2] & (alu_func[1] & D1L152 # !alu_func[1] & (D1L51));
+
+
+--D1L140 is alu:inst10|alu_out[14]~4808
+D1L140 = D1L138 & (D1L139 & J2L32 # !D1L139 & (D1L79)) # !D1L138 & (!D1L139);
+
+
+--D1L141 is alu:inst10|alu_out[14]~4809
+D1L141 = D1L140 & (J1L30 & J2L30 # !D1L148) # !D1L140 & D1L148 & (J1L30 # J2L30);
+
+
+--D1L142 is alu:inst10|alu_out[14]~4810
+D1L142 = alu_func[0] & J2L28 # !alu_func[0] & (J2L30 $ J1L30);
+
+
+--D1L143 is alu:inst10|alu_out[14]~4811
+D1L143 = alu_func[2] & (alu_func[1] & D1L141 # !alu_func[1] & (D1L142)) # !alu_func[2] & D1L141;
+
+
+--A1L84 is rtl~204
+A1L84 = !D1L147 & !D1L113 & !D1L85 & !D1L143;
+
+
+--D1L126 is alu:inst10|alu_out[11]~4812
+D1L126 = D1L138 & (D1L139 & J2L26 # !D1L139 & (D1L73)) # !D1L138 & (!D1L139);
+
+
+--D1L127 is alu:inst10|alu_out[11]~4813
+D1L127 = D1L126 & (J1L24 & J2L24 # !D1L148) # !D1L126 & D1L148 & (J1L24 # J2L24);
+
+
+--D1L128 is alu:inst10|alu_out[11]~4814
+D1L128 = alu_func[0] & J2L22 # !alu_func[0] & (J2L24 $ J1L24);
+
+
+--D1L129 is alu:inst10|alu_out[11]~4815
+D1L129 = alu_func[2] & (alu_func[1] & D1L127 # !alu_func[1] & (D1L128)) # !alu_func[2] & D1L127;
+
+
+--D1L122 is alu:inst10|alu_out[10]~4816
+D1L122 = D1L138 & (D1L139 & J2L24 # !D1L139 & (D1L71)) # !D1L138 & (!D1L139);
+
+
+--D1L123 is alu:inst10|alu_out[10]~4817
+D1L123 = D1L122 & (J1L22 & J2L22 # !D1L148) # !D1L122 & D1L148 & (J1L22 # J2L22);
+
+
+--D1L124 is alu:inst10|alu_out[10]~4818
+D1L124 = alu_func[0] & J2L20 # !alu_func[0] & (J2L22 $ J1L22);
+
+
+--D1L125 is alu:inst10|alu_out[10]~4819
+D1L125 = alu_func[2] & (alu_func[1] & D1L123 # !alu_func[1] & (D1L124)) # !alu_func[2] & D1L123;
+
+
+--D1L106 is alu:inst10|alu_out[6]~4820
+D1L106 = D1L138 & (D1L139 & J2L16 # !D1L139 & (D1L63)) # !D1L138 & (!D1L139);
+
+
+--D1L107 is alu:inst10|alu_out[6]~4821
+D1L107 = D1L106 & (J1L14 & J2L14 # !D1L148) # !D1L106 & D1L148 & (J1L14 # J2L14);
+
+
+--D1L108 is alu:inst10|alu_out[6]~4822
+D1L108 = alu_func[0] & J2L12 # !alu_func[0] & (J2L14 $ J1L14);
+
+
+--D1L109 is alu:inst10|alu_out[6]~4823
+D1L109 = alu_func[2] & (alu_func[1] & D1L107 # !alu_func[1] & (D1L108)) # !alu_func[2] & D1L107;
+
+
+--D1L90 is alu:inst10|alu_out[2]~4824
+D1L90 = D1L138 & (D1L139 & J2L8 # !D1L139 & (D1L55)) # !D1L138 & (!D1L139);
+
+
+--D1L91 is alu:inst10|alu_out[2]~4825
+D1L91 = D1L90 & (J1L6 & J2L6 # !D1L148) # !D1L90 & D1L148 & (J1L6 # J2L6);
+
+
+--D1L92 is alu:inst10|alu_out[2]~4826
+D1L92 = alu_func[0] & J2L4 # !alu_func[0] & (J2L6 $ J1L6);
+
+
+--D1L93 is alu:inst10|alu_out[2]~4827
+D1L93 = alu_func[2] & (alu_func[1] & D1L91 # !alu_func[1] & (D1L92)) # !alu_func[2] & D1L91;
+
+
+--A1L85 is rtl~205
+A1L85 = !D1L129 & !D1L125 & !D1L109 & !D1L93;
+
+
+--D1L114 is alu:inst10|alu_out[8]~4828
+D1L114 = D1L138 & (D1L139 & J2L20 # !D1L139 & (D1L67)) # !D1L138 & (!D1L139);
+
+
+--D1L115 is alu:inst10|alu_out[8]~4829
+D1L115 = D1L114 & (J1L18 & J2L18 # !D1L148) # !D1L114 & D1L148 & (J1L18 # J2L18);
+
+
+--D1L116 is alu:inst10|alu_out[8]~4830
+D1L116 = alu_func[0] & J2L16 # !alu_func[0] & (J2L18 $ J1L18);
+
+
+--D1L117 is alu:inst10|alu_out[8]~4831
+D1L117 = alu_func[2] & (alu_func[1] & D1L115 # !alu_func[1] & (D1L116)) # !alu_func[2] & D1L115;
+
+
+--D1L86 is alu:inst10|alu_out[1]~4832
+D1L86 = D1L138 & (D1L139 & J2L6 # !D1L139 & (D1L53)) # !D1L138 & (!D1L139);
+
+
+--D1L87 is alu:inst10|alu_out[1]~4833
+D1L87 = D1L86 & (J1L4 & J2L4 # !D1L148) # !D1L86 & D1L148 & (J1L4 # J2L4);
+
+
+--D1L88 is alu:inst10|alu_out[1]~4834
+D1L88 = alu_func[0] & J2L2 # !alu_func[0] & (J2L4 $ J1L4);
+
+
+--D1L89 is alu:inst10|alu_out[1]~4835
+D1L89 = alu_func[2] & (alu_func[1] & D1L87 # !alu_func[1] & (D1L88)) # !alu_func[2] & D1L87;
+
+
+--D1L134 is alu:inst10|alu_out[13]~4836
+D1L134 = D1L138 & (D1L139 & J2L30 # !D1L139 & (D1L77)) # !D1L138 & (!D1L139);
+
+
+--D1L135 is alu:inst10|alu_out[13]~4837
+D1L135 = D1L134 & (J1L28 & J2L28 # !D1L148) # !D1L134 & D1L148 & (J1L28 # J2L28);
+
+
+--D1L136 is alu:inst10|alu_out[13]~4838
+D1L136 = alu_func[0] & J2L26 # !alu_func[0] & (J2L28 $ J1L28);
+
+
+--D1L137 is alu:inst10|alu_out[13]~4839
+D1L137 = alu_func[2] & (alu_func[1] & D1L135 # !alu_func[1] & (D1L136)) # !alu_func[2] & D1L135;
+
+
+--D1L94 is alu:inst10|alu_out[3]~4840
+D1L94 = D1L138 & (D1L139 & J2L10 # !D1L139 & (D1L57)) # !D1L138 & (!D1L139);
+
+
+--D1L95 is alu:inst10|alu_out[3]~4841
+D1L95 = D1L94 & (J1L8 & J2L8 # !D1L148) # !D1L94 & D1L148 & (J1L8 # J2L8);
+
+
+--D1L96 is alu:inst10|alu_out[3]~4842
+D1L96 = alu_func[0] & J2L6 # !alu_func[0] & (J2L8 $ J1L8);
+
+
+--D1L97 is alu:inst10|alu_out[3]~4843
+D1L97 = alu_func[2] & (alu_func[1] & D1L95 # !alu_func[1] & (D1L96)) # !alu_func[2] & D1L95;
+
+
+--A1L86 is rtl~206
+A1L86 = !D1L117 & !D1L89 & !D1L137 & !D1L97;
+
+
+--D1L98 is alu:inst10|alu_out[4]~4844
+D1L98 = D1L138 & (D1L139 & J2L12 # !D1L139 & (D1L59)) # !D1L138 & (!D1L139);
+
+
+--D1L99 is alu:inst10|alu_out[4]~4845
+D1L99 = D1L98 & (J1L10 & J2L10 # !D1L148) # !D1L98 & D1L148 & (J1L10 # J2L10);
+
+
+--D1L100 is alu:inst10|alu_out[4]~4846
+D1L100 = alu_func[0] & J2L8 # !alu_func[0] & (J2L10 $ J1L10);
+
+
+--D1L101 is alu:inst10|alu_out[4]~4847
+D1L101 = alu_func[2] & (alu_func[1] & D1L99 # !alu_func[1] & (D1L100)) # !alu_func[2] & D1L99;
+
+
+--D1L118 is alu:inst10|alu_out[9]~4848
+D1L118 = D1L138 & (D1L139 & J2L22 # !D1L139 & (D1L69)) # !D1L138 & (!D1L139);
+
+
+--D1L119 is alu:inst10|alu_out[9]~4849
+D1L119 = D1L118 & (J1L20 & J2L20 # !D1L148) # !D1L118 & D1L148 & (J1L20 # J2L20);
+
+
+--D1L120 is alu:inst10|alu_out[9]~4850
+D1L120 = alu_func[0] & J2L18 # !alu_func[0] & (J2L20 $ J1L20);
+
+
+--D1L121 is alu:inst10|alu_out[9]~4851
+D1L121 = alu_func[2] & (alu_func[1] & D1L119 # !alu_func[1] & (D1L120)) # !alu_func[2] & D1L119;
+
+
+--D1L130 is alu:inst10|alu_out[12]~4852
+D1L130 = D1L138 & (D1L139 & J2L28 # !D1L139 & (D1L75)) # !D1L138 & (!D1L139);
+
+
+--D1L131 is alu:inst10|alu_out[12]~4853
+D1L131 = D1L130 & (J1L26 & J2L26 # !D1L148) # !D1L130 & D1L148 & (J1L26 # J2L26);
+
+
+--D1L132 is alu:inst10|alu_out[12]~4854
+D1L132 = alu_func[0] & J2L24 # !alu_func[0] & (J2L26 $ J1L26);
+
+
+--D1L133 is alu:inst10|alu_out[12]~4855
+D1L133 = alu_func[2] & (alu_func[1] & D1L131 # !alu_func[1] & (D1L132)) # !alu_func[2] & D1L131;
+
+
+--D1L102 is alu:inst10|alu_out[5]~4856
+D1L102 = D1L138 & (D1L139 & J2L14 # !D1L139 & (D1L61)) # !D1L138 & (!D1L139);
+
+
+--D1L103 is alu:inst10|alu_out[5]~4857
+D1L103 = D1L102 & (J1L12 & J2L12 # !D1L148) # !D1L102 & D1L148 & (J1L12 # J2L12);
+
+
+--D1L104 is alu:inst10|alu_out[5]~4858
+D1L104 = alu_func[0] & J2L10 # !alu_func[0] & (J2L12 $ J1L12);
+
+
+--D1L105 is alu:inst10|alu_out[5]~4859
+D1L105 = alu_func[2] & (alu_func[1] & D1L103 # !alu_func[1] & (D1L104)) # !alu_func[2] & D1L103;
+
+
+--A1L87 is rtl~207
+A1L87 = !D1L101 & !D1L121 & !D1L133 & !D1L105;
+
+
+--A1L88 is rtl~208
+A1L88 = A1L84 & A1L85 & A1L86 & A1L87;
+
+
+--D1L153 is alu:inst10|c~427
+D1L153 = !alu_func[2] & !alu_func[1];
+
+
+--D1L218 is alu:inst10|v~26
+D1L218 = D1L81 & (J2L32 # J1L32) # !D1L81 & (!J1L32 # !J2L32) # !D1L153;
+
+
+--F1_q_a[15] is lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_0r01:auto_generated|q_a[15]
+--RAM Block Operation Mode: ROM
+--Port A Depth: 16, Port A Width: 1
+--Port A Logical Depth: 16, Port A Logical Width: 16
+--Port A Input: Registered, Port A Output: Un-registered
+F1_q_a[15]_PORT_A_address = BUS(rom_aa[0], rom_aa[1], rom_aa[2], rom_aa[3]);
+F1_q_a[15]_PORT_A_address_reg = DFFE(F1_q_a[15]_PORT_A_address, F1_q_a[15]_clock_0, , , );
+F1_q_a[15]_clock_0 = sw_clk;
+F1_q_a[15]_PORT_A_data_out = MEMORY(, , F1_q_a[15]_PORT_A_address_reg, , , , , , F1_q_a[15]_clock_0, , , , , );
+F1_q_a[15] = F1_q_a[15]_PORT_A_data_out[0];
+
+
+--F1_q_a[14] is lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_0r01:auto_generated|q_a[14]
+--RAM Block Operation Mode: ROM
+--Port A Depth: 16, Port A Width: 1
+--Port A Logical Depth: 16, Port A Logical Width: 16
+--Port A Input: Registered, Port A Output: Un-registered
+F1_q_a[14]_PORT_A_address = BUS(rom_aa[0], rom_aa[1], rom_aa[2], rom_aa[3]);
+F1_q_a[14]_PORT_A_address_reg = DFFE(F1_q_a[14]_PORT_A_address, F1_q_a[14]_clock_0, , , );
+F1_q_a[14]_clock_0 = sw_clk;
+F1_q_a[14]_PORT_A_data_out = MEMORY(, , F1_q_a[14]_PORT_A_address_reg, , , , , , F1_q_a[14]_clock_0, , , , , );
+F1_q_a[14] = F1_q_a[14]_PORT_A_data_out[0];
+
+
+--F1_q_a[13] is lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_0r01:auto_generated|q_a[13]
+--RAM Block Operation Mode: ROM
+--Port A Depth: 16, Port A Width: 1
+--Port A Logical Depth: 16, Port A Logical Width: 16
+--Port A Input: Registered, Port A Output: Un-registered
+F1_q_a[13]_PORT_A_address = BUS(rom_aa[0], rom_aa[1], rom_aa[2], rom_aa[3]);
+F1_q_a[13]_PORT_A_address_reg = DFFE(F1_q_a[13]_PORT_A_address, F1_q_a[13]_clock_0, , , );
+F1_q_a[13]_clock_0 = sw_clk;
+F1_q_a[13]_PORT_A_data_out = MEMORY(, , F1_q_a[13]_PORT_A_address_reg, , , , , , F1_q_a[13]_clock_0, , , , , );
+F1_q_a[13] = F1_q_a[13]_PORT_A_data_out[0];
+
+
+--F1_q_a[12] is lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_0r01:auto_generated|q_a[12]
+--RAM Block Operation Mode: ROM
+--Port A Depth: 16, Port A Width: 1
+--Port A Logical Depth: 16, Port A Logical Width: 16
+--Port A Input: Registered, Port A Output: Un-registered
+F1_q_a[12]_PORT_A_address = BUS(rom_aa[0], rom_aa[1], rom_aa[2], rom_aa[3]);
+F1_q_a[12]_PORT_A_address_reg = DFFE(F1_q_a[12]_PORT_A_address, F1_q_a[12]_clock_0, , , );
+F1_q_a[12]_clock_0 = sw_clk;
+F1_q_a[12]_PORT_A_data_out = MEMORY(, , F1_q_a[12]_PORT_A_address_reg, , , , , , F1_q_a[12]_clock_0, , , , , );
+F1_q_a[12] = F1_q_a[12]_PORT_A_data_out[0];
+
+
+--F1_q_a[11] is lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_0r01:auto_generated|q_a[11]
+--RAM Block Operation Mode: ROM
+--Port A Depth: 16, Port A Width: 1
+--Port A Logical Depth: 16, Port A Logical Width: 16
+--Port A Input: Registered, Port A Output: Un-registered
+F1_q_a[11]_PORT_A_address = BUS(rom_aa[0], rom_aa[1], rom_aa[2], rom_aa[3]);
+F1_q_a[11]_PORT_A_address_reg = DFFE(F1_q_a[11]_PORT_A_address, F1_q_a[11]_clock_0, , , );
+F1_q_a[11]_clock_0 = sw_clk;
+F1_q_a[11]_PORT_A_data_out = MEMORY(, , F1_q_a[11]_PORT_A_address_reg, , , , , , F1_q_a[11]_clock_0, , , , , );
+F1_q_a[11] = F1_q_a[11]_PORT_A_data_out[0];
+
+
+--F1_q_a[10] is lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_0r01:auto_generated|q_a[10]
+--RAM Block Operation Mode: ROM
+--Port A Depth: 16, Port A Width: 1
+--Port A Logical Depth: 16, Port A Logical Width: 16
+--Port A Input: Registered, Port A Output: Un-registered
+F1_q_a[10]_PORT_A_address = BUS(rom_aa[0], rom_aa[1], rom_aa[2], rom_aa[3]);
+F1_q_a[10]_PORT_A_address_reg = DFFE(F1_q_a[10]_PORT_A_address, F1_q_a[10]_clock_0, , , );
+F1_q_a[10]_clock_0 = sw_clk;
+F1_q_a[10]_PORT_A_data_out = MEMORY(, , F1_q_a[10]_PORT_A_address_reg, , , , , , F1_q_a[10]_clock_0, , , , , );
+F1_q_a[10] = F1_q_a[10]_PORT_A_data_out[0];
+
+
+--F1_q_a[9] is lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_0r01:auto_generated|q_a[9]
+--RAM Block Operation Mode: ROM
+--Port A Depth: 16, Port A Width: 1
+--Port A Logical Depth: 16, Port A Logical Width: 16
+--Port A Input: Registered, Port A Output: Un-registered
+F1_q_a[9]_PORT_A_address = BUS(rom_aa[0], rom_aa[1], rom_aa[2], rom_aa[3]);
+F1_q_a[9]_PORT_A_address_reg = DFFE(F1_q_a[9]_PORT_A_address, F1_q_a[9]_clock_0, , , );
+F1_q_a[9]_clock_0 = sw_clk;
+F1_q_a[9]_PORT_A_data_out = MEMORY(, , F1_q_a[9]_PORT_A_address_reg, , , , , , F1_q_a[9]_clock_0, , , , , );
+F1_q_a[9] = F1_q_a[9]_PORT_A_data_out[0];
+
+
+--F1_q_a[8] is lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_0r01:auto_generated|q_a[8]
+--RAM Block Operation Mode: ROM
+--Port A Depth: 16, Port A Width: 1
+--Port A Logical Depth: 16, Port A Logical Width: 16
+--Port A Input: Registered, Port A Output: Un-registered
+F1_q_a[8]_PORT_A_address = BUS(rom_aa[0], rom_aa[1], rom_aa[2], rom_aa[3]);
+F1_q_a[8]_PORT_A_address_reg = DFFE(F1_q_a[8]_PORT_A_address, F1_q_a[8]_clock_0, , , );
+F1_q_a[8]_clock_0 = sw_clk;
+F1_q_a[8]_PORT_A_data_out = MEMORY(, , F1_q_a[8]_PORT_A_address_reg, , , , , , F1_q_a[8]_clock_0, , , , , );
+F1_q_a[8] = F1_q_a[8]_PORT_A_data_out[0];
+
+
+--F1_q_a[7] is lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_0r01:auto_generated|q_a[7]
+--RAM Block Operation Mode: ROM
+--Port A Depth: 16, Port A Width: 1
+--Port A Logical Depth: 16, Port A Logical Width: 16
+--Port A Input: Registered, Port A Output: Un-registered
+F1_q_a[7]_PORT_A_address = BUS(rom_aa[0], rom_aa[1], rom_aa[2], rom_aa[3]);
+F1_q_a[7]_PORT_A_address_reg = DFFE(F1_q_a[7]_PORT_A_address, F1_q_a[7]_clock_0, , , );
+F1_q_a[7]_clock_0 = sw_clk;
+F1_q_a[7]_PORT_A_data_out = MEMORY(, , F1_q_a[7]_PORT_A_address_reg, , , , , , F1_q_a[7]_clock_0, , , , , );
+F1_q_a[7] = F1_q_a[7]_PORT_A_data_out[0];
+
+
+--F1_q_a[6] is lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_0r01:auto_generated|q_a[6]
+--RAM Block Operation Mode: ROM
+--Port A Depth: 16, Port A Width: 1
+--Port A Logical Depth: 16, Port A Logical Width: 16
+--Port A Input: Registered, Port A Output: Un-registered
+F1_q_a[6]_PORT_A_address = BUS(rom_aa[0], rom_aa[1], rom_aa[2], rom_aa[3]);
+F1_q_a[6]_PORT_A_address_reg = DFFE(F1_q_a[6]_PORT_A_address, F1_q_a[6]_clock_0, , , );
+F1_q_a[6]_clock_0 = sw_clk;
+F1_q_a[6]_PORT_A_data_out = MEMORY(, , F1_q_a[6]_PORT_A_address_reg, , , , , , F1_q_a[6]_clock_0, , , , , );
+F1_q_a[6] = F1_q_a[6]_PORT_A_data_out[0];
+
+
+--F1_q_a[5] is lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_0r01:auto_generated|q_a[5]
+--RAM Block Operation Mode: ROM
+--Port A Depth: 16, Port A Width: 1
+--Port A Logical Depth: 16, Port A Logical Width: 16
+--Port A Input: Registered, Port A Output: Un-registered
+F1_q_a[5]_PORT_A_address = BUS(rom_aa[0], rom_aa[1], rom_aa[2], rom_aa[3]);
+F1_q_a[5]_PORT_A_address_reg = DFFE(F1_q_a[5]_PORT_A_address, F1_q_a[5]_clock_0, , , );
+F1_q_a[5]_clock_0 = sw_clk;
+F1_q_a[5]_PORT_A_data_out = MEMORY(, , F1_q_a[5]_PORT_A_address_reg, , , , , , F1_q_a[5]_clock_0, , , , , );
+F1_q_a[5] = F1_q_a[5]_PORT_A_data_out[0];
+
+
+--F1_q_a[4] is lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_0r01:auto_generated|q_a[4]
+--RAM Block Operation Mode: ROM
+--Port A Depth: 16, Port A Width: 1
+--Port A Logical Depth: 16, Port A Logical Width: 16
+--Port A Input: Registered, Port A Output: Un-registered
+F1_q_a[4]_PORT_A_address = BUS(rom_aa[0], rom_aa[1], rom_aa[2], rom_aa[3]);
+F1_q_a[4]_PORT_A_address_reg = DFFE(F1_q_a[4]_PORT_A_address, F1_q_a[4]_clock_0, , , );
+F1_q_a[4]_clock_0 = sw_clk;
+F1_q_a[4]_PORT_A_data_out = MEMORY(, , F1_q_a[4]_PORT_A_address_reg, , , , , , F1_q_a[4]_clock_0, , , , , );
+F1_q_a[4] = F1_q_a[4]_PORT_A_data_out[0];
+
+
+--F1_q_a[3] is lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_0r01:auto_generated|q_a[3]
+--RAM Block Operation Mode: ROM
+--Port A Depth: 16, Port A Width: 1
+--Port A Logical Depth: 16, Port A Logical Width: 16
+--Port A Input: Registered, Port A Output: Un-registered
+F1_q_a[3]_PORT_A_address = BUS(rom_aa[0], rom_aa[1], rom_aa[2], rom_aa[3]);
+F1_q_a[3]_PORT_A_address_reg = DFFE(F1_q_a[3]_PORT_A_address, F1_q_a[3]_clock_0, , , );
+F1_q_a[3]_clock_0 = sw_clk;
+F1_q_a[3]_PORT_A_data_out = MEMORY(, , F1_q_a[3]_PORT_A_address_reg, , , , , , F1_q_a[3]_clock_0, , , , , );
+F1_q_a[3] = F1_q_a[3]_PORT_A_data_out[0];
+
+
+--F1_q_a[2] is lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_0r01:auto_generated|q_a[2]
+--RAM Block Operation Mode: ROM
+--Port A Depth: 16, Port A Width: 1
+--Port A Logical Depth: 16, Port A Logical Width: 16
+--Port A Input: Registered, Port A Output: Un-registered
+F1_q_a[2]_PORT_A_address = BUS(rom_aa[0], rom_aa[1], rom_aa[2], rom_aa[3]);
+F1_q_a[2]_PORT_A_address_reg = DFFE(F1_q_a[2]_PORT_A_address, F1_q_a[2]_clock_0, , , );
+F1_q_a[2]_clock_0 = sw_clk;
+F1_q_a[2]_PORT_A_data_out = MEMORY(, , F1_q_a[2]_PORT_A_address_reg, , , , , , F1_q_a[2]_clock_0, , , , , );
+F1_q_a[2] = F1_q_a[2]_PORT_A_data_out[0];
+
+
+--F1_q_a[1] is lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_0r01:auto_generated|q_a[1]
+--RAM Block Operation Mode: ROM
+--Port A Depth: 16, Port A Width: 1
+--Port A Logical Depth: 16, Port A Logical Width: 16
+--Port A Input: Registered, Port A Output: Un-registered
+F1_q_a[1]_PORT_A_address = BUS(rom_aa[0], rom_aa[1], rom_aa[2], rom_aa[3]);
+F1_q_a[1]_PORT_A_address_reg = DFFE(F1_q_a[1]_PORT_A_address, F1_q_a[1]_clock_0, , , );
+F1_q_a[1]_clock_0 = sw_clk;
+F1_q_a[1]_PORT_A_data_out = MEMORY(, , F1_q_a[1]_PORT_A_address_reg, , , , , , F1_q_a[1]_clock_0, , , , , );
+F1_q_a[1] = F1_q_a[1]_PORT_A_data_out[0];
+
+
+--F1_q_a[0] is lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_0r01:auto_generated|q_a[0]
+--RAM Block Operation Mode: ROM
+--Port A Depth: 16, Port A Width: 1
+--Port A Logical Depth: 16, Port A Logical Width: 16
+--Port A Input: Registered, Port A Output: Un-registered
+F1_q_a[0]_PORT_A_address = BUS(rom_aa[0], rom_aa[1], rom_aa[2], rom_aa[3]);
+F1_q_a[0]_PORT_A_address_reg = DFFE(F1_q_a[0]_PORT_A_address, F1_q_a[0]_clock_0, , , );
+F1_q_a[0]_clock_0 = sw_clk;
+F1_q_a[0]_PORT_A_data_out = MEMORY(, , F1_q_a[0]_PORT_A_address_reg, , , , , , F1_q_a[0]_clock_0, , , , , );
+F1_q_a[0] = F1_q_a[0]_PORT_A_data_out[0];
+
+
+--H1L1 is regfile:inst1|decoder2_to_4:decoder|sel01~44
+H1L1 = DR[0] & DRWR & !DR[1];
+
+
+--H1L2 is regfile:inst1|decoder2_to_4:decoder|sel01~45
+H1L2 = DR[1] & DRWR & !DR[0];
+
+
+--G1L1 is regfile:inst1|register_16:Areg00|process0~0
+G1L1 = DRWR & !DR[1] & !DR[0];
+
+
+--H1L3 is regfile:inst1|decoder2_to_4:decoder|sel01~46
+H1L3 = DR[1] & DR[0] & DRWR;
+
+
+--D1L84 is alu:inst10|alu_out[0]~4860
+D1L84 = D1L83 & (!alu_func[2]) # !D1L83 & alu_func[2] & (J1L2 $ J2L2);
+
+
+--D1L85 is alu:inst10|alu_out[0]~4861
+D1L85 = D1L83 & (D1L84 # J2L4 & !alu_func[0]) # !D1L83 & D1L84 & (!alu_func[0]);
+
+
+--SR[0] is SR[0]
+--operation mode is input
+
+SR[0] = INPUT();
+
+
+--SR[1] is SR[1]
+--operation mode is input
+
+SR[1] = INPUT();
+
+
+--cin is cin
+--operation mode is input
+
+cin = INPUT();
+
+
+--DR[1] is DR[1]
+--operation mode is input
+
+DR[1] = INPUT();
+
+
+--DR[0] is DR[0]
+--operation mode is input
+
+DR[0] = INPUT();
+
+
+--alu_func[1] is alu_func[1]
+--operation mode is input
+
+alu_func[1] = INPUT();
+
+
+--alu_func[0] is alu_func[0]
+--operation mode is input
+
+alu_func[0] = INPUT();
+
+
+--alu_func[2] is alu_func[2]
+--operation mode is input
+
+alu_func[2] = INPUT();
+
+
+--sw_clk is sw_clk
+--operation mode is input
+
+sw_clk = INPUT();
+
+
+--sw_rst is sw_rst
+--operation mode is input
+
+sw_rst = INPUT();
+
+
+--DRWR is DRWR
+--operation mode is input
+
+DRWR = INPUT();
+
+
+--rom_aa[0] is rom_aa[0]
+--operation mode is input
+
+rom_aa[0] = INPUT();
+
+
+--rom_aa[1] is rom_aa[1]
+--operation mode is input
+
+rom_aa[1] = INPUT();
+
+
+--rom_aa[2] is rom_aa[2]
+--operation mode is input
+
+rom_aa[2] = INPUT();
+
+
+--rom_aa[3] is rom_aa[3]
+--operation mode is input
+
+rom_aa[3] = INPUT();
+
+
+--c is c
+--operation mode is output
+
+c = OUTPUT(D1L151);
+
+
+--z is z
+--operation mode is output
+
+z = OUTPUT(A1L88);
+
+
+--v is v
+--operation mode is output
+
+v = OUTPUT(!D1L218);
+
+
+--s is s
+--operation mode is output
+
+s = OUTPUT(D1L147);
+
+
+--alu_a[15] is alu_a[15]
+--operation mode is output
+
+alu_a[15] = OUTPUT(J1L32);
+
+
+--alu_a[14] is alu_a[14]
+--operation mode is output
+
+alu_a[14] = OUTPUT(J1L30);
+
+
+--alu_a[13] is alu_a[13]
+--operation mode is output
+
+alu_a[13] = OUTPUT(J1L28);
+
+
+--alu_a[12] is alu_a[12]
+--operation mode is output
+
+alu_a[12] = OUTPUT(J1L26);
+
+
+--alu_a[11] is alu_a[11]
+--operation mode is output
+
+alu_a[11] = OUTPUT(J1L24);
+
+
+--alu_a[10] is alu_a[10]
+--operation mode is output
+
+alu_a[10] = OUTPUT(J1L22);
+
+
+--alu_a[9] is alu_a[9]
+--operation mode is output
+
+alu_a[9] = OUTPUT(J1L20);
+
+
+--alu_a[8] is alu_a[8]
+--operation mode is output
+
+alu_a[8] = OUTPUT(J1L18);
+
+
+--alu_a[7] is alu_a[7]
+--operation mode is output
+
+alu_a[7] = OUTPUT(J1L16);
+
+
+--alu_a[6] is alu_a[6]
+--operation mode is output
+
+alu_a[6] = OUTPUT(J1L14);
+
+
+--alu_a[5] is alu_a[5]
+--operation mode is output
+
+alu_a[5] = OUTPUT(J1L12);
+
+
+--alu_a[4] is alu_a[4]
+--operation mode is output
+
+alu_a[4] = OUTPUT(J1L10);
+
+
+--alu_a[3] is alu_a[3]
+--operation mode is output
+
+alu_a[3] = OUTPUT(J1L8);
+
+
+--alu_a[2] is alu_a[2]
+--operation mode is output
+
+alu_a[2] = OUTPUT(J1L6);
+
+
+--alu_a[1] is alu_a[1]
+--operation mode is output
+
+alu_a[1] = OUTPUT(J1L4);
+
+
+--alu_a[0] is alu_a[0]
+--operation mode is output
+
+alu_a[0] = OUTPUT(J1L2);
+
+
+--alu_b[15] is alu_b[15]
+--operation mode is output
+
+alu_b[15] = OUTPUT(J2L32);
+
+
+--alu_b[14] is alu_b[14]
+--operation mode is output
+
+alu_b[14] = OUTPUT(J2L30);
+
+
+--alu_b[13] is alu_b[13]
+--operation mode is output
+
+alu_b[13] = OUTPUT(J2L28);
+
+
+--alu_b[12] is alu_b[12]
+--operation mode is output
+
+alu_b[12] = OUTPUT(J2L26);
+
+
+--alu_b[11] is alu_b[11]
+--operation mode is output
+
+alu_b[11] = OUTPUT(J2L24);
+
+
+--alu_b[10] is alu_b[10]
+--operation mode is output
+
+alu_b[10] = OUTPUT(J2L22);
+
+
+--alu_b[9] is alu_b[9]
+--operation mode is output
+
+alu_b[9] = OUTPUT(J2L20);
+
+
+--alu_b[8] is alu_b[8]
+--operation mode is output
+
+alu_b[8] = OUTPUT(J2L18);
+
+
+--alu_b[7] is alu_b[7]
+--operation mode is output
+
+alu_b[7] = OUTPUT(J2L16);
+
+
+--alu_b[6] is alu_b[6]
+--operation mode is output
+
+alu_b[6] = OUTPUT(J2L14);
+
+
+--alu_b[5] is alu_b[5]
+--operation mode is output
+
+alu_b[5] = OUTPUT(J2L12);
+
+
+--alu_b[4] is alu_b[4]
+--operation mode is output
+
+alu_b[4] = OUTPUT(J2L10);
+
+
+--alu_b[3] is alu_b[3]
+--operation mode is output
+
+alu_b[3] = OUTPUT(J2L8);
+
+
+--alu_b[2] is alu_b[2]
+--operation mode is output
+
+alu_b[2] = OUTPUT(J2L6);
+
+
+--alu_b[1] is alu_b[1]
+--operation mode is output
+
+alu_b[1] = OUTPUT(J2L4);
+
+
+--alu_b[0] is alu_b[0]
+--operation mode is output
+
+alu_b[0] = OUTPUT(J2L2);
+
+
+--alu_out[15] is alu_out[15]
+--operation mode is output
+
+alu_out[15] = OUTPUT(D1L147);
+
+
+--alu_out[14] is alu_out[14]
+--operation mode is output
+
+alu_out[14] = OUTPUT(D1L143);
+
+
+--alu_out[13] is alu_out[13]
+--operation mode is output
+
+alu_out[13] = OUTPUT(D1L137);
+
+
+--alu_out[12] is alu_out[12]
+--operation mode is output
+
+alu_out[12] = OUTPUT(D1L133);
+
+
+--alu_out[11] is alu_out[11]
+--operation mode is output
+
+alu_out[11] = OUTPUT(D1L129);
+
+
+--alu_out[10] is alu_out[10]
+--operation mode is output
+
+alu_out[10] = OUTPUT(D1L125);
+
+
+--alu_out[9] is alu_out[9]
+--operation mode is output
+
+alu_out[9] = OUTPUT(D1L121);
+
+
+--alu_out[8] is alu_out[8]
+--operation mode is output
+
+alu_out[8] = OUTPUT(D1L117);
+
+
+--alu_out[7] is alu_out[7]
+--operation mode is output
+
+alu_out[7] = OUTPUT(D1L113);
+
+
+--alu_out[6] is alu_out[6]
+--operation mode is output
+
+alu_out[6] = OUTPUT(D1L109);
+
+
+--alu_out[5] is alu_out[5]
+--operation mode is output
+
+alu_out[5] = OUTPUT(D1L105);
+
+
+--alu_out[4] is alu_out[4]
+--operation mode is output
+
+alu_out[4] = OUTPUT(D1L101);
+
+
+--alu_out[3] is alu_out[3]
+--operation mode is output
+
+alu_out[3] = OUTPUT(D1L97);
+
+
+--alu_out[2] is alu_out[2]
+--operation mode is output
+
+alu_out[2] = OUTPUT(D1L93);
+
+
+--alu_out[1] is alu_out[1]
+--operation mode is output
+
+alu_out[1] = OUTPUT(D1L89);
+
+
+--alu_out[0] is alu_out[0]
+--operation mode is output
+
+alu_out[0] = OUTPUT(D1L85);
+
+
+--rom_q[15] is rom_q[15]
+--operation mode is output
+
+rom_q[15] = OUTPUT(F1_q_a[15]);
+
+
+--rom_q[14] is rom_q[14]
+--operation mode is output
+
+rom_q[14] = OUTPUT(F1_q_a[14]);
+
+
+--rom_q[13] is rom_q[13]
+--operation mode is output
+
+rom_q[13] = OUTPUT(F1_q_a[13]);
+
+
+--rom_q[12] is rom_q[12]
+--operation mode is output
+
+rom_q[12] = OUTPUT(F1_q_a[12]);
+
+
+--rom_q[11] is rom_q[11]
+--operation mode is output
+
+rom_q[11] = OUTPUT(F1_q_a[11]);
+
+
+--rom_q[10] is rom_q[10]
+--operation mode is output
+
+rom_q[10] = OUTPUT(F1_q_a[10]);
+
+
+--rom_q[9] is rom_q[9]
+--operation mode is output
+
+rom_q[9] = OUTPUT(F1_q_a[9]);
+
+
+--rom_q[8] is rom_q[8]
+--operation mode is output
+
+rom_q[8] = OUTPUT(F1_q_a[8]);
+
+
+--rom_q[7] is rom_q[7]
+--operation mode is output
+
+rom_q[7] = OUTPUT(F1_q_a[7]);
+
+
+--rom_q[6] is rom_q[6]
+--operation mode is output
+
+rom_q[6] = OUTPUT(F1_q_a[6]);
+
+
+--rom_q[5] is rom_q[5]
+--operation mode is output
+
+rom_q[5] = OUTPUT(F1_q_a[5]);
+
+
+--rom_q[4] is rom_q[4]
+--operation mode is output
+
+rom_q[4] = OUTPUT(F1_q_a[4]);
+
+
+--rom_q[3] is rom_q[3]
+--operation mode is output
+
+rom_q[3] = OUTPUT(F1_q_a[3]);
+
+
+--rom_q[2] is rom_q[2]
+--operation mode is output
+
+rom_q[2] = OUTPUT(F1_q_a[2]);
+
+
+--rom_q[1] is rom_q[1]
+--operation mode is output
+
+rom_q[1] = OUTPUT(F1_q_a[1]);
+
+
+--rom_q[0] is rom_q[0]
+--operation mode is output
+
+rom_q[0] = OUTPUT(F1_q_a[0]);
+
+

@@ -1,0 +1,95 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--D1_q_a[0] is lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_qs01:auto_generated|q_a[0] at M4K_X41_Y17
+--RAM Block Operation Mode: ROM
+--Port A Depth: 4, Port A Width: 4
+--Port A Logical Depth: 4, Port A Logical Width: 4
+--Port A Input: Registered, Port A Output: Un-registered
+D1_q_a[0]_PORT_A_address = BUS(a[0], a[1]);
+D1_q_a[0]_PORT_A_address_reg = DFFE(D1_q_a[0]_PORT_A_address, D1_q_a[0]_clock_0, , , );
+D1_q_a[0]_clock_0 = GLOBAL(A1L10);
+D1_q_a[0]_PORT_A_data_out = MEMORY(, , D1_q_a[0]_PORT_A_address_reg, , , , , , D1_q_a[0]_clock_0, , , , , );
+D1_q_a[0] = D1_q_a[0]_PORT_A_data_out[0];
+
+--D1_q_a[3] is lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_qs01:auto_generated|q_a[3] at M4K_X41_Y17
+D1_q_a[0]_PORT_A_address = BUS(a[0], a[1]);
+D1_q_a[0]_PORT_A_address_reg = DFFE(D1_q_a[0]_PORT_A_address, D1_q_a[0]_clock_0, , , );
+D1_q_a[0]_clock_0 = GLOBAL(A1L10);
+D1_q_a[0]_PORT_A_data_out = MEMORY(, , D1_q_a[0]_PORT_A_address_reg, , , , , , D1_q_a[0]_clock_0, , , , , );
+D1_q_a[3] = D1_q_a[0]_PORT_A_data_out[3];
+
+--D1_q_a[2] is lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_qs01:auto_generated|q_a[2] at M4K_X41_Y17
+D1_q_a[0]_PORT_A_address = BUS(a[0], a[1]);
+D1_q_a[0]_PORT_A_address_reg = DFFE(D1_q_a[0]_PORT_A_address, D1_q_a[0]_clock_0, , , );
+D1_q_a[0]_clock_0 = GLOBAL(A1L10);
+D1_q_a[0]_PORT_A_data_out = MEMORY(, , D1_q_a[0]_PORT_A_address_reg, , , , , , D1_q_a[0]_clock_0, , , , , );
+D1_q_a[2] = D1_q_a[0]_PORT_A_data_out[2];
+
+--D1_q_a[1] is lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_qs01:auto_generated|q_a[1] at M4K_X41_Y17
+D1_q_a[0]_PORT_A_address = BUS(a[0], a[1]);
+D1_q_a[0]_PORT_A_address_reg = DFFE(D1_q_a[0]_PORT_A_address, D1_q_a[0]_clock_0, , , );
+D1_q_a[0]_clock_0 = GLOBAL(A1L10);
+D1_q_a[0]_PORT_A_data_out = MEMORY(, , D1_q_a[0]_PORT_A_address_reg, , , , , , D1_q_a[0]_clock_0, , , , , );
+D1_q_a[1] = D1_q_a[0]_PORT_A_data_out[1];
+
+
+--pin_name1 is pin_name1 at PIN_31
+--operation mode is input
+
+pin_name1 = INPUT();
+
+
+--a[0] is a[0] at PIN_14
+--operation mode is input
+
+a[0] = INPUT();
+
+
+--a[1] is a[1] at PIN_13
+--operation mode is input
+
+a[1] = INPUT();
+
+
+--o[3] is o[3] at PIN_165
+--operation mode is output
+
+o[3] = OUTPUT(D1_q_a[3]);
+
+
+--o[2] is o[2] at PIN_164
+--operation mode is output
+
+o[2] = OUTPUT(D1_q_a[2]);
+
+
+--o[1] is o[1] at PIN_162
+--operation mode is output
+
+o[1] = OUTPUT(D1_q_a[1]);
+
+
+--o[0] is o[0] at PIN_161
+--operation mode is output
+
+o[0] = OUTPUT(D1_q_a[0]);
+
+
+
+
+
+--A1L10 is pin_name1~clkctrl at CLKCTRL_G2
+A1L10 = cycloneii_clkctrl(.INCLK[0] = pin_name1) WITH (clock_type = "Global Clock");
+
+

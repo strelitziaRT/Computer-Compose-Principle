@@ -1,0 +1,76 @@
+# Copyright (C) 1991-2005 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+
+
+# The default values for assignments are stored in the file
+#		Project_1_assignment_defaults.qdf
+# If this file doesn't exist, and for assignments not listed, see file
+#		assignment_defaults.qdf
+
+# Altera recommends that you do not modify this file. This
+# file is updated automatically by the Quartus II software
+# and any changes you make may be lost or overwritten.
+
+
+set_global_assignment -name FAMILY "Cyclone II"
+set_global_assignment -name DEVICE EP2C20Q240C8
+set_global_assignment -name TOP_LEVEL_ENTITY Project_1
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 5.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "18:29:09  NOVEMBER 16, 2020"
+set_global_assignment -name LAST_QUARTUS_VERSION 5.1
+set_global_assignment -name HEX_FILE Project_1.hex
+set_global_assignment -name BDF_FILE Project_1.bdf
+set_location_assignment PIN_20 -to ADDR[0]
+set_location_assignment PIN_18 -to ADDR[1]
+set_location_assignment PIN_16 -to ADDR[2]
+set_location_assignment PIN_15 -to ADDR[3]
+set_location_assignment PIN_31 -to CLK
+set_location_assignment PIN_14 -to DR[0]
+set_location_assignment PIN_13 -to DR[1]
+set_location_assignment PIN_58 -to DR_data[0]
+set_location_assignment PIN_57 -to DR_data[1]
+set_location_assignment PIN_56 -to DR_data[2]
+set_location_assignment PIN_55 -to DR_data[3]
+set_location_assignment PIN_54 -to DR_data[4]
+set_location_assignment PIN_52 -to DR_data[5]
+set_location_assignment PIN_51 -to DR_data[6]
+set_location_assignment PIN_50 -to DR_data[7]
+set_location_assignment PIN_49 -to DR_data[8]
+set_location_assignment PIN_47 -to DR_data[9]
+set_location_assignment PIN_46 -to DR_data[10]
+set_location_assignment PIN_44 -to DR_data[11]
+set_location_assignment PIN_42 -to DR_data[12]
+set_location_assignment PIN_41 -to DR_data[13]
+set_location_assignment PIN_39 -to DR_data[14]
+set_location_assignment PIN_38 -to DR_data[15]
+set_location_assignment PIN_223 -to DRWR
+set_location_assignment PIN_91 -to RES
+set_location_assignment PIN_11 -to SR[0]
+set_location_assignment PIN_9 -to SR[1]
+set_location_assignment PIN_161 -to SR_data[0]
+set_location_assignment PIN_162 -to SR_data[1]
+set_location_assignment PIN_164 -to SR_data[2]
+set_location_assignment PIN_165 -to SR_data[3]
+set_location_assignment PIN_166 -to SR_data[4]
+set_location_assignment PIN_168 -to SR_data[5]
+set_location_assignment PIN_171 -to SR_data[6]
+set_location_assignment PIN_174 -to SR_data[7]
+set_location_assignment PIN_177 -to SR_data[8]
+set_location_assignment PIN_184 -to SR_data[9]
+set_location_assignment PIN_186 -to SR_data[10]
+set_location_assignment PIN_188 -to SR_data[11]
+set_location_assignment PIN_191 -to SR_data[12]
+set_location_assignment PIN_194 -to SR_data[13]
+set_location_assignment PIN_197 -to SR_data[14]
+set_location_assignment PIN_200 -to SR_data[15]
